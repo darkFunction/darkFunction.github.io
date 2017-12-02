@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on Sam Taylor</title>
-    <link>https://notes.darkfunction.com/categories/tools/</link>
+    <link>https://darkfunction.github.io/categories/tools/</link>
     <description>Recent content in Tools on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Thu, 30 May 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://notes.darkfunction.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://darkfunction.github.io/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dropplets &#43; BTSync</title>
-      <link>https://notes.darkfunction.com/posts/dropplets-btsync/</link>
+      <link>https://darkfunction.github.io/posts/dropplets-btsync/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/dropplets-btsync/</guid>
+      <guid>https://darkfunction.github.io/posts/dropplets-btsync/</guid>
       <description>Just installed Dropplets, love the clean layout and simplicity. Since the content of the Dropplets site is just a directory with markdown textfiles, I thought it would be cool to BTSync this folder. Now all I have to do to publish a post is make a new textfile on any machine in the same synced folder, and it will be published as soon as there&amp;rsquo;s an internet connection!</description>
     </item>
     
     <item>
       <title>iOS autocompletion in Vim</title>
-      <link>https://notes.darkfunction.com/posts/vimios/</link>
+      <link>https://darkfunction.github.io/posts/vimios/</link>
       <pubDate>Sat, 19 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/vimios/</guid>
+      <guid>https://darkfunction.github.io/posts/vimios/</guid>
       <description>I’ve been playing around with Vim recently and wanted to get autocompletion for my iOS project working. Vim isn’t great as an IDE replacement for XCode, but it’s nice to be able to jump in and edit code files quickly if you need to.
 Firstly, you will need to install clang complete.
 Here’s what I needed to add to my .vimrc file:

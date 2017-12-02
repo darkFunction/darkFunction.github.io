@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Sam Taylor</title>
-    <link>https://notes.darkfunction.com/categories/</link>
+    <link>https://darkfunction.github.io/categories/</link>
     <description>Recent content in Categories on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Tue, 15 Jan 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://notes.darkfunction.com/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://darkfunction.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Articles</title>
-      <link>https://notes.darkfunction.com/categories/articles/</link>
+      <link>https://darkfunction.github.io/categories/articles/</link>
       <pubDate>Tue, 15 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/categories/articles/</guid>
+      <guid>https://darkfunction.github.io/categories/articles/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Code</title>
-      <link>https://notes.darkfunction.com/categories/code/</link>
+      <link>https://darkfunction.github.io/categories/code/</link>
       <pubDate>Thu, 28 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/categories/code/</guid>
+      <guid>https://darkfunction.github.io/categories/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Darkfunction Editor</title>
-      <link>https://notes.darkfunction.com/categories/darkfunction-editor/</link>
+      <link>https://darkfunction.github.io/categories/darkfunction-editor/</link>
       <pubDate>Fri, 18 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/categories/darkfunction-editor/</guid>
+      <guid>https://darkfunction.github.io/categories/darkfunction-editor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nsscotland</title>
-      <link>https://notes.darkfunction.com/categories/nsscotland/</link>
+      <link>https://darkfunction.github.io/categories/nsscotland/</link>
       <pubDate>Sun, 20 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/categories/nsscotland/</guid>
+      <guid>https://darkfunction.github.io/categories/nsscotland/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tools</title>
-      <link>https://notes.darkfunction.com/categories/tools/</link>
+      <link>https://darkfunction.github.io/categories/tools/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/categories/tools/</guid>
+      <guid>https://darkfunction.github.io/categories/tools/</guid>
       <description></description>
     </item>
     

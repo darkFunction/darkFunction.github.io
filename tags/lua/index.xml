@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lua on Sam Taylor</title>
-    <link>https://notes.darkfunction.com/tags/lua/</link>
+    <link>https://darkfunction.github.io/tags/lua/</link>
     <description>Recent content in Lua on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Sat, 26 Oct 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://notes.darkfunction.com/tags/lua/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://darkfunction.github.io/tags/lua/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bitcoin IRC sentiment analysis</title>
-      <link>https://notes.darkfunction.com/posts/bitcoinircsentiment/</link>
+      <link>https://darkfunction.github.io/posts/bitcoinircsentiment/</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/bitcoinircsentiment/</guid>
+      <guid>https://darkfunction.github.io/posts/bitcoinircsentiment/</guid>
       <description>I wrote a Lua bot to sit and monitor the IRC channels listed here (minus the tickers) for uses of the &amp;lsquo;sentiment words&amp;rsquo; listed here. Obviously this has no chance of giving meaningful results but it was a fun project.
 Click for the graph of bitcoin price vs. bitcoin sentiment on IRC.
 https://github.com/darkFunction/BitcoinIRCSentiment</description>
@@ -24,10 +24,10 @@ https://github.com/darkFunction/BitcoinIRCSentiment</description>
     
     <item>
       <title>Game dev diary: 1</title>
-      <link>https://notes.darkfunction.com/posts/gamedevone/</link>
+      <link>https://darkfunction.github.io/posts/gamedevone/</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/gamedevone/</guid>
+      <guid>https://darkfunction.github.io/posts/gamedevone/</guid>
       <description>Work has started on a new game! I&amp;rsquo;m using the Moai framework. Here&amp;rsquo;s the latest screenshot:</description>
     </item>
     

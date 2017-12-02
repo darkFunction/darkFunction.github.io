@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sam Taylor</title>
-    <link>https://notes.darkfunction.com/posts/</link>
+    <link>https://darkfunction.github.io/posts/</link>
     <description>Recent content in Posts on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 12 Jul 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://notes.darkfunction.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://darkfunction.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Line art</title>
-      <link>https://notes.darkfunction.com/posts/line-art/</link>
+      <link>https://darkfunction.github.io/posts/line-art/</link>
       <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/line-art/</guid>
+      <guid>https://darkfunction.github.io/posts/line-art/</guid>
       <description>Built a line drawing tool inspired by linify.me.
 Made with a &amp;ldquo;pin spacing&amp;rdquo; option so that I can do this for real using cotton string and a wooden frame with pins. Bought the materials but need to update the code to output sequences of directions before attempting it. Initially written using a genetic algorithm, it worked but was waaaay too slow, so switched to subtracting the darkest lines between pins from the image.</description>
     </item>
     
     <item>
       <title>Ant foraging simulator</title>
-      <link>https://notes.darkfunction.com/posts/ant-foraging-simulator/</link>
+      <link>https://darkfunction.github.io/posts/ant-foraging-simulator/</link>
       <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/ant-foraging-simulator/</guid>
+      <guid>https://darkfunction.github.io/posts/ant-foraging-simulator/</guid>
       <description>Wrote an ant foraging/pheromone simulator for a laugh. It doesn&amp;rsquo;t work very well, probably needs the parameters tweaked a bit.
 Source</description>
     </item>
     
     <item>
       <title>Verbe Du Jour online!</title>
-      <link>https://notes.darkfunction.com/posts/verbedujour/</link>
+      <link>https://darkfunction.github.io/posts/verbedujour/</link>
       <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/verbedujour/</guid>
+      <guid>https://darkfunction.github.io/posts/verbedujour/</guid>
       <description>I&amp;rsquo;ve hacked together a new site in Flask to assist with learning French. The idea is that a new verb is chosen every day, and users are able to see all conjugations as well as search for other verbs. It has been great using Flask- it takes (almost) all of the pain out of web development. Definitely recommended! Clicky click: Learn French and Conjugate Your Verbs!
 Edit Been getting really good feedback over at Duolingo and Reddit, it&amp;rsquo;s really encouraging.</description>
     </item>
     
     <item>
       <title>Casino fairness testing</title>
-      <link>https://notes.darkfunction.com/posts/casinofairnesstesting/</link>
+      <link>https://darkfunction.github.io/posts/casinofairnesstesting/</link>
       <pubDate>Sat, 13 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/casinofairnesstesting/</guid>
+      <guid>https://darkfunction.github.io/posts/casinofairnesstesting/</guid>
       <description>Been playing around with Sikuli for automating a slots game and outputting the results to a simple Google Charts page on a local webserver. Got it running under Crunchbang and threw some machines up. Sikuli is a really good framework (maybe the best for multi-purpose Linux automation?), and while the fuzzy image search is a real time saver, it sucks at differentiating between colours. If two images are the same in all aspects except colour, it&amp;rsquo;s unreliable, and you need to start comparing pixels manually with java.</description>
     </item>
     
     <item>
       <title>Codalo released! </title>
-      <link>https://notes.darkfunction.com/posts/codalorelease/</link>
+      <link>https://darkfunction.github.io/posts/codalorelease/</link>
       <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/codalorelease/</guid>
+      <guid>https://darkfunction.github.io/posts/codalorelease/</guid>
       <description>After 11 months of intense, out-of-hours work, darkFunction Software&amp;rsquo;s first iOS app is finally LIVE on the AppStore!!!</description>
     </item>
     
     <item>
       <title>Painting with genetic algorithms</title>
-      <link>https://notes.darkfunction.com/posts/polypainter/</link>
+      <link>https://darkfunction.github.io/posts/polypainter/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/polypainter/</guid>
+      <guid>https://darkfunction.github.io/posts/polypainter/</guid>
       <description>Using genetic algorithms to build images from layers of translucent polygons.
 Inspired by this and also this.
 Just learning Python! The code is here: https://github.com/darkFunction/PolygonPainter.
@@ -73,10 +73,10 @@ The old_painter directory contains an non-breeding strategy in which a single en
     
     <item>
       <title>Bitcoin IRC sentiment analysis</title>
-      <link>https://notes.darkfunction.com/posts/bitcoinircsentiment/</link>
+      <link>https://darkfunction.github.io/posts/bitcoinircsentiment/</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/bitcoinircsentiment/</guid>
+      <guid>https://darkfunction.github.io/posts/bitcoinircsentiment/</guid>
       <description>I wrote a Lua bot to sit and monitor the IRC channels listed here (minus the tickers) for uses of the &amp;lsquo;sentiment words&amp;rsquo; listed here. Obviously this has no chance of giving meaningful results but it was a fun project.
 Click for the graph of bitcoin price vs. bitcoin sentiment on IRC.
 https://github.com/darkFunction/BitcoinIRCSentiment</description>
@@ -84,19 +84,19 @@ https://github.com/darkFunction/BitcoinIRCSentiment</description>
     
     <item>
       <title>Game dev diary: 1</title>
-      <link>https://notes.darkfunction.com/posts/gamedevone/</link>
+      <link>https://darkfunction.github.io/posts/gamedevone/</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/gamedevone/</guid>
+      <guid>https://darkfunction.github.io/posts/gamedevone/</guid>
       <description>Work has started on a new game! I&amp;rsquo;m using the Moai framework. Here&amp;rsquo;s the latest screenshot:</description>
     </item>
     
     <item>
       <title>NSScotland 2013: Sunday </title>
-      <link>https://notes.darkfunction.com/posts/nsscotland_sunday/</link>
+      <link>https://darkfunction.github.io/posts/nsscotland_sunday/</link>
       <pubDate>Sun, 20 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/nsscotland_sunday/</guid>
+      <guid>https://darkfunction.github.io/posts/nsscotland_sunday/</guid>
       <description>Notes from day two!
 How to Get Hired by Black Pixel (Matt Farrugia) This was really a talk about how to improve your skills, that you should be proactive in making a plan to improve yourself and identify areas of strength and weakness. I think Matt raises a good point that you should have a &amp;lsquo;hard copy&amp;rsquo; of your skillset and track what you know.
  Becoming a better developer  Love your work Constantly look for areas of improvement Write down your plan to improve  Skills tree Skills table of technologies - (None | Beginner | Intermediate | Expert) Everyone will have a different plan.</description>
@@ -104,10 +104,10 @@ How to Get Hired by Black Pixel (Matt Farrugia) This was really a talk about how
     
     <item>
       <title>NSScotland 2013: Saturday </title>
-      <link>https://notes.darkfunction.com/posts/nsscotland_saturday/</link>
+      <link>https://darkfunction.github.io/posts/nsscotland_saturday/</link>
       <pubDate>Sat, 19 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/nsscotland_saturday/</guid>
+      <guid>https://darkfunction.github.io/posts/nsscotland_saturday/</guid>
       <description>Notes from day one!
 Crazy and Focused (Daniel Steinberg) Steinberg delivered a motivating presentation encouraging developers to focus in on the core elements of our apps, and how we should clearly and specifically identify our users.
 Key points  If you ask your users what they want, they will ask for everything. Stay focused on your core features. Apps can suck in subtle ways (for example, not using the email keyboard for email input).</description>
@@ -115,76 +115,76 @@ Key points  If you ask your users what they want, they will ask for everything. 
     
     <item>
       <title>Visualising Objective-C: Introducing DFGrok!</title>
-      <link>https://notes.darkfunction.com/posts/dfgrok/</link>
+      <link>https://darkfunction.github.io/posts/dfgrok/</link>
       <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/dfgrok/</guid>
+      <guid>https://darkfunction.github.io/posts/dfgrok/</guid>
       <description>As developers we spend a lot of time sketching out class relationships and program flow in notebooks or on whiteboards, as a shared point of reference when communicating ideas or as a personal memory aid. A few months ago I discovered a handy online generator called yUML. It describes itself as being for &amp;ldquo;light, back-of-napkin style UML usage&amp;rdquo;, and provides a simple syntax that allows you to quickly type out class relationships which it then renders into basic, prettified UML.</description>
     </item>
     
     <item>
       <title>Jalapeno, one month later</title>
-      <link>https://notes.darkfunction.com/posts/jalapeno_one_month_later/</link>
+      <link>https://darkfunction.github.io/posts/jalapeno_one_month_later/</link>
       <pubDate>Fri, 30 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/jalapeno_one_month_later/</guid>
+      <guid>https://darkfunction.github.io/posts/jalapeno_one_month_later/</guid>
       <description>Just a little status update for the Jalapeno that has been chugging along nicely for just over a month now. I replaced the obnoxious fan with a quieter one, and about 2 weeks ago I flashed the firmware, putting the speed up to about 7.5GH/s. This speed increase coincided with the huge difficulty rise earlier in the month, so the graph looks more even than it would if it were still running at stock speed.</description>
     </item>
     
     <item>
       <title>Bitforce Jalapeno &#43; Raspberry Pi &#43; cgminer</title>
-      <link>https://notes.darkfunction.com/posts/jalapeno/</link>
+      <link>https://darkfunction.github.io/posts/jalapeno/</link>
       <pubDate>Thu, 25 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/jalapeno/</guid>
+      <guid>https://darkfunction.github.io/posts/jalapeno/</guid>
       <description>My BFL Jalapeno finally arrived. It&amp;rsquo;s a cute little box but the fan is really whirring away, so I ordered a replacement. It&amp;rsquo;s sitting in the living room plugged into a Pi which is also acting as a backup file server. I&amp;rsquo;m monitoring cgminer on this box through my VPS which has a tmux screen pane devoted to it, so that I can keep an eye on it without having to login all the time.</description>
     </item>
     
     <item>
       <title>Dropplets &#43; BTSync</title>
-      <link>https://notes.darkfunction.com/posts/dropplets-btsync/</link>
+      <link>https://darkfunction.github.io/posts/dropplets-btsync/</link>
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/dropplets-btsync/</guid>
+      <guid>https://darkfunction.github.io/posts/dropplets-btsync/</guid>
       <description>Just installed Dropplets, love the clean layout and simplicity. Since the content of the Dropplets site is just a directory with markdown textfiles, I thought it would be cool to BTSync this folder. Now all I have to do to publish a post is make a new textfile on any machine in the same synced folder, and it will be published as soon as there&amp;rsquo;s an internet connection!</description>
     </item>
     
     <item>
       <title>darkFunction Editor is now OPEN SOURCE! </title>
-      <link>https://notes.darkfunction.com/posts/dfeditoross/</link>
+      <link>https://darkfunction.github.io/posts/dfeditoross/</link>
       <pubDate>Sun, 03 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/dfeditoross/</guid>
+      <guid>https://darkfunction.github.io/posts/dfeditoross/</guid>
       <description>https://github.com/darkFunction/darkFunction-Editor
 Enjoy! :D</description>
     </item>
     
     <item>
       <title>Lucid dreaming</title>
-      <link>https://notes.darkfunction.com/posts/lucid-dreaming/</link>
+      <link>https://darkfunction.github.io/posts/lucid-dreaming/</link>
       <pubDate>Tue, 15 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/lucid-dreaming/</guid>
+      <guid>https://darkfunction.github.io/posts/lucid-dreaming/</guid>
       <description>Lucid dreaming is the conscious realisation that you are dreaming, becoming fully aware and &amp;#8216;awake&amp;#8217; while still asleep. Most people have had one at some time or another. The concept garnered some popularity around the release of Inception and was a main theme in the film Waking Life.
 Usually when you tell someone you are interested in lucid dreaming, you might as well have said that you dowse for spirit crystals under the light of a full moon.</description>
     </item>
     
     <item>
       <title>Handy UIViewController debug display</title>
-      <link>https://notes.darkfunction.com/posts/uiviewcontroller-debug/</link>
+      <link>https://darkfunction.github.io/posts/uiviewcontroller-debug/</link>
       <pubDate>Thu, 20 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/uiviewcontroller-debug/</guid>
+      <guid>https://darkfunction.github.io/posts/uiviewcontroller-debug/</guid>
       <description>When working with complex iOS projects with many screens, sometimes it can be annoying and time consuming to figure out exactly which class to start looking at when you want to make changes to a view controller. You can use this handy UIViewController category extension to display the name of the class on each screen. They are great reference points especially if you are jumping into a new codebase.
 #ifdef DEBUG #import &amp;quot;UIViewController+Debug.</description>
     </item>
     
     <item>
       <title>XNA Source: Particle engine / menu renderer </title>
-      <link>https://notes.darkfunction.com/posts/xnaparticlerenderer/</link>
+      <link>https://darkfunction.github.io/posts/xnaparticlerenderer/</link>
       <pubDate>Thu, 28 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/xnaparticlerenderer/</guid>
+      <guid>https://darkfunction.github.io/posts/xnaparticlerenderer/</guid>
       <description>A few years ago I implemented a particle engine and a flexible menu creator in XNA. They were written for a game that was never completed, but I thought I would post up them up here in case anyone wants to use them.
 Google Code repo for game prototype
 Quick link to UI Manager
@@ -193,10 +193,10 @@ Quick link to particle engine source</description>
     
     <item>
       <title>Barebones 2D OpenGL ES game engine in C&#43;&#43;</title>
-      <link>https://notes.darkfunction.com/posts/turbineengine/</link>
+      <link>https://darkfunction.github.io/posts/turbineengine/</link>
       <pubDate>Wed, 07 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/turbineengine/</guid>
+      <guid>https://darkfunction.github.io/posts/turbineengine/</guid>
       <description>https://github.com/darkFunction/Turbine
 I wrote this a while ago. I was planning to write an iPhone game with it, but then realised life is too short to create Yet Another Engine when I could just be using one of the many superior open source alternatives. Perhaps somebody will find it useful.
 All the legwork of setting up a 2D OGLES environment, loading and packing images into textures, and drawing these sprites from the textures is done.</description>
@@ -204,10 +204,10 @@ All the legwork of setting up a 2D OGLES environment, loading and packing images
     
     <item>
       <title>iOS autocompletion in Vim</title>
-      <link>https://notes.darkfunction.com/posts/vimios/</link>
+      <link>https://darkfunction.github.io/posts/vimios/</link>
       <pubDate>Sat, 19 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/vimios/</guid>
+      <guid>https://darkfunction.github.io/posts/vimios/</guid>
       <description>I’ve been playing around with Vim recently and wanted to get autocompletion for my iOS project working. Vim isn’t great as an IDE replacement for XCode, but it’s nice to be able to jump in and edit code files quickly if you need to.
 Firstly, you will need to install clang complete.
 Here’s what I needed to add to my .vimrc file:
@@ -216,47 +216,47 @@ let g:clanguseroptions=’-triple i386-apple-macosx10.6.7 -target-cpu yonah -tar
     
     <item>
       <title>A change of direction... </title>
-      <link>https://notes.darkfunction.com/posts/changeofdirection/</link>
+      <link>https://darkfunction.github.io/posts/changeofdirection/</link>
       <pubDate>Fri, 18 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/changeofdirection/</guid>
+      <guid>https://darkfunction.github.io/posts/changeofdirection/</guid>
       <description>It&amp;rsquo;s been a while since I updated the sprite editor. It hasn&amp;rsquo;t been abandoned, but I&amp;rsquo;m giving myself a change of scenery for a while, as there always seems to be another feature looming around the corner, dragging a fresh net of bugs behind it. The project has given me a new level of respect for the software development process, and a better understanding of my abilities and boundaries when taking on solo projects.</description>
     </item>
     
     <item>
       <title>darkFunction Editor: GLBasic import libraries! </title>
-      <link>https://notes.darkfunction.com/posts/glbasiclibs/</link>
+      <link>https://darkfunction.github.io/posts/glbasiclibs/</link>
       <pubDate>Tue, 20 Sep 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/glbasiclibs/</guid>
+      <guid>https://darkfunction.github.io/posts/glbasiclibs/</guid>
       <description>Thanks to Slydog. Please see the Import Libraries page.</description>
     </item>
     
     <item>
       <title>darkFunction Editor: Version 1.2 released </title>
-      <link>https://notes.darkfunction.com/posts/dfeditorv12/</link>
+      <link>https://darkfunction.github.io/posts/dfeditorv12/</link>
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/dfeditorv12/</guid>
+      <guid>https://darkfunction.github.io/posts/dfeditorv12/</guid>
       <description>Have fun ;)</description>
     </item>
     
     <item>
       <title>darkFunction Editor: XNA import libraries! </title>
-      <link>https://notes.darkfunction.com/posts/xnalibs/</link>
+      <link>https://darkfunction.github.io/posts/xnalibs/</link>
       <pubDate>Mon, 15 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/xnalibs/</guid>
+      <guid>https://darkfunction.github.io/posts/xnalibs/</guid>
       <description>Bruce Markham has kindly published libraries for importing the generated XML into your XNA project for Windows / Windows Phone / XBox.
 Good stuff. Please see the Import Libraries page.</description>
     </item>
     
     <item>
       <title>darkFunction Editor: Version 1.2 BETA available now</title>
-      <link>https://notes.darkfunction.com/posts/dfeditorv12beta/</link>
+      <link>https://darkfunction.github.io/posts/dfeditorv12beta/</link>
       <pubDate>Sun, 14 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/dfeditorv12beta/</guid>
+      <guid>https://darkfunction.github.io/posts/dfeditorv12beta/</guid>
       <description>The first build of version 1.2 is available now from the download page.
 New in this release:
  Animation onion skins Sprite flipping/rotation in animations Centred sprite coordinates for animations Sprite preview panels Keyboard input for easy single pixel adjustment Editable animation names Consistent look and feel across platforms (Looks better on OSX now) UI enhancements / minor bugfixes  Happy coding ;)</description>
@@ -264,20 +264,20 @@ New in this release:
     
     <item>
       <title>darkFunction Editor: Version 1.1 released </title>
-      <link>https://notes.darkfunction.com/posts/dfeditorv11/</link>
+      <link>https://darkfunction.github.io/posts/dfeditorv11/</link>
       <pubDate>Wed, 15 Jun 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/dfeditorv11/</guid>
+      <guid>https://darkfunction.github.io/posts/dfeditorv11/</guid>
       <description>Version 1.1 release changes:
  New texture packer tool for working with sprites in multiple seperate images. Drag and drop support for sprites in animation editor. Ability to define number of loops in animations. Installer supports shortcuts. Minor bug fixes.  Enjoy!</description>
     </item>
     
     <item>
       <title>darkFunction Editor: Version 1.0 launched </title>
-      <link>https://notes.darkfunction.com/posts/dfeditorv10/</link>
+      <link>https://darkfunction.github.io/posts/dfeditorv10/</link>
       <pubDate>Sun, 15 May 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/posts/dfeditorv10/</guid>
+      <guid>https://darkfunction.github.io/posts/dfeditorv10/</guid>
       <description>darkFunction is very proud to announce the release of the spritesheet and animation editor! Download here.</description>
     </item>
     

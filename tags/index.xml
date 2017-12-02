@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sam Taylor</title>
-    <link>https://notes.darkfunction.com/tags/</link>
+    <link>https://darkfunction.github.io/tags/</link>
     <description>Recent content in Tags on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Fri, 30 Aug 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://notes.darkfunction.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://darkfunction.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bitcoin</title>
-      <link>https://notes.darkfunction.com/tags/bitcoin/</link>
+      <link>https://darkfunction.github.io/tags/bitcoin/</link>
       <pubDate>Fri, 30 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/tags/bitcoin/</guid>
+      <guid>https://darkfunction.github.io/tags/bitcoin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C&#43;&#43;</title>
-      <link>https://notes.darkfunction.com/tags/c&#43;&#43;/</link>
+      <link>https://darkfunction.github.io/tags/c&#43;&#43;/</link>
       <pubDate>Wed, 07 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/tags/c&#43;&#43;/</guid>
+      <guid>https://darkfunction.github.io/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Crypto</title>
-      <link>https://notes.darkfunction.com/tags/crypto/</link>
+      <link>https://darkfunction.github.io/tags/crypto/</link>
       <pubDate>Fri, 30 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/tags/crypto/</guid>
+      <guid>https://darkfunction.github.io/tags/crypto/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Darkfunction Editor</title>
-      <link>https://notes.darkfunction.com/tags/darkfunction-editor/</link>
+      <link>https://darkfunction.github.io/tags/darkfunction-editor/</link>
       <pubDate>Sun, 03 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/tags/darkfunction-editor/</guid>
+      <guid>https://darkfunction.github.io/tags/darkfunction-editor/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Flask</title>
-      <link>https://notes.darkfunction.com/tags/flask/</link>
+      <link>https://darkfunction.github.io/tags/flask/</link>
       <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/tags/flask/</guid>
+      <guid>https://darkfunction.github.io/tags/flask/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lua</title>
-      <link>https://notes.darkfunction.com/tags/lua/</link>
+      <link>https://darkfunction.github.io/tags/lua/</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/tags/lua/</guid>
+      <guid>https://darkfunction.github.io/tags/lua/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Objective C</title>
-      <link>https://notes.darkfunction.com/tags/objective-c/</link>
+      <link>https://darkfunction.github.io/tags/objective-c/</link>
       <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/tags/objective-c/</guid>
+      <guid>https://darkfunction.github.io/tags/objective-c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://notes.darkfunction.com/tags/python/</link>
+      <link>https://darkfunction.github.io/tags/python/</link>
       <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/tags/python/</guid>
+      <guid>https://darkfunction.github.io/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Typescript</title>
-      <link>https://notes.darkfunction.com/tags/typescript/</link>
+      <link>https://darkfunction.github.io/tags/typescript/</link>
       <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://notes.darkfunction.com/tags/typescript/</guid>
+      <guid>https://darkfunction.github.io/tags/typescript/</guid>
       <description></description>
     </item>
     
