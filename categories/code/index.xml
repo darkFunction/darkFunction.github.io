@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on Sam Taylor</title>
+    <link>https://notes.darkfunction.com/categories/code/</link>
+    <description>Recent content in Code on Sam Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 28 Jun 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://notes.darkfunction.com/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>XNA Source: Particle engine / menu renderer </title>
+      <link>https://notes.darkfunction.com/posts/xnaparticlerenderer/</link>
+      <pubDate>Thu, 28 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/xnaparticlerenderer/</guid>
+      <description>A few years ago I implemented a particle engine and a flexible menu creator in XNA. They were written for a game that was never completed, but I thought I would post up them up here in case anyone wants to use them.
+Google Code repo for game prototype
+Quick link to UI Manager
+Quick link to particle engine source</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Darkfunction Editor on Sam Taylor</title>
+    <link>https://notes.darkfunction.com/categories/darkfunction-editor/</link>
+    <description>Recent content in Darkfunction Editor on Sam Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 18 Nov 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://notes.darkfunction.com/categories/darkfunction-editor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A change of direction... </title>
+      <link>https://notes.darkfunction.com/posts/changeofdirection/</link>
+      <pubDate>Fri, 18 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/changeofdirection/</guid>
+      <description>It&amp;rsquo;s been a while since I updated the sprite editor. It hasn&amp;rsquo;t been abandoned, but I&amp;rsquo;m giving myself a change of scenery for a while, as there always seems to be another feature looming around the corner, dragging a fresh net of bugs behind it. The project has given me a new level of respect for the software development process, and a better understanding of my abilities and boundaries when taking on solo projects.</description>
+    </item>
+    
+  </channel>
+</rss>

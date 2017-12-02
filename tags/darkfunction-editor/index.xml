@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Darkfunction Editor on Sam Taylor</title>
+    <link>https://notes.darkfunction.com/tags/darkfunction-editor/</link>
+    <description>Recent content in Darkfunction Editor on Sam Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 03 Feb 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://notes.darkfunction.com/tags/darkfunction-editor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>darkFunction Editor is now OPEN SOURCE! </title>
+      <link>https://notes.darkfunction.com/posts/dfeditoross/</link>
+      <pubDate>Sun, 03 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/dfeditoross/</guid>
+      <description>https://github.com/darkFunction/darkFunction-Editor
+Enjoy! :D</description>
+    </item>
+    
+    <item>
+      <title>darkFunction Editor: GLBasic import libraries! </title>
+      <link>https://notes.darkfunction.com/posts/glbasiclibs/</link>
+      <pubDate>Tue, 20 Sep 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/glbasiclibs/</guid>
+      <description>Thanks to Slydog. Please see the Import Libraries page.</description>
+    </item>
+    
+    <item>
+      <title>darkFunction Editor: Version 1.2 released </title>
+      <link>https://notes.darkfunction.com/posts/dfeditorv12/</link>
+      <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/dfeditorv12/</guid>
+      <description>Have fun ;)</description>
+    </item>
+    
+    <item>
+      <title>darkFunction Editor: XNA import libraries! </title>
+      <link>https://notes.darkfunction.com/posts/xnalibs/</link>
+      <pubDate>Mon, 15 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/xnalibs/</guid>
+      <description>Bruce Markham has kindly published libraries for importing the generated XML into your XNA project for Windows / Windows Phone / XBox.
+Good stuff. Please see the Import Libraries page.</description>
+    </item>
+    
+    <item>
+      <title>darkFunction Editor: Version 1.2 BETA available now</title>
+      <link>https://notes.darkfunction.com/posts/dfeditorv12beta/</link>
+      <pubDate>Sun, 14 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/dfeditorv12beta/</guid>
+      <description>The first build of version 1.2 is available now from the download page.
+New in this release:
+ Animation onion skins Sprite flipping/rotation in animations Centred sprite coordinates for animations Sprite preview panels Keyboard input for easy single pixel adjustment Editable animation names Consistent look and feel across platforms (Looks better on OSX now) UI enhancements / minor bugfixes  Happy coding ;)</description>
+    </item>
+    
+    <item>
+      <title>darkFunction Editor: Version 1.1 released </title>
+      <link>https://notes.darkfunction.com/posts/dfeditorv11/</link>
+      <pubDate>Wed, 15 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/dfeditorv11/</guid>
+      <description>Version 1.1 release changes:
+ New texture packer tool for working with sprites in multiple seperate images. Drag and drop support for sprites in animation editor. Ability to define number of loops in animations. Installer supports shortcuts. Minor bug fixes.  Enjoy!</description>
+    </item>
+    
+    <item>
+      <title>darkFunction Editor: Version 1.0 launched </title>
+      <link>https://notes.darkfunction.com/posts/dfeditorv10/</link>
+      <pubDate>Sun, 15 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/dfeditorv10/</guid>
+      <description>darkFunction is very proud to announce the release of the spritesheet and animation editor! Download here.</description>
+    </item>
+    
+  </channel>
+</rss>

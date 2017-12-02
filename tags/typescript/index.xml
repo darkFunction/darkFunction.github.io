@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typescript on Sam Taylor</title>
+    <link>https://notes.darkfunction.com/tags/typescript/</link>
+    <description>Recent content in Typescript on Sam Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 12 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://notes.darkfunction.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Line art</title>
+      <link>https://notes.darkfunction.com/posts/line-art/</link>
+      <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/line-art/</guid>
+      <description>Built a line drawing tool inspired by linify.me.
+Made with a &amp;ldquo;pin spacing&amp;rdquo; option so that I can do this for real using cotton string and a wooden frame with pins. Bought the materials but need to update the code to output sequences of directions before attempting it. Initially written using a genetic algorithm, it worked but was waaaay too slow, so switched to subtracting the darkest lines between pins from the image.</description>
+    </item>
+    
+    <item>
+      <title>Ant foraging simulator</title>
+      <link>https://notes.darkfunction.com/posts/ant-foraging-simulator/</link>
+      <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/ant-foraging-simulator/</guid>
+      <description>Wrote an ant foraging/pheromone simulator for a laugh. It doesn&amp;rsquo;t work very well, probably needs the parameters tweaked a bit.
+Source</description>
+    </item>
+    
+  </channel>
+</rss>

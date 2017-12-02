@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Objective C on Sam Taylor</title>
+    <link>https://notes.darkfunction.com/tags/objective-c/</link>
+    <description>Recent content in Objective C on Sam Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 14 Nov 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://notes.darkfunction.com/tags/objective-c/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Codalo released! </title>
+      <link>https://notes.darkfunction.com/posts/codalorelease/</link>
+      <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/codalorelease/</guid>
+      <description>After 11 months of intense, out-of-hours work, darkFunction Software&amp;rsquo;s first iOS app is finally LIVE on the AppStore!!!</description>
+    </item>
+    
+    <item>
+      <title>Visualising Objective-C: Introducing DFGrok!</title>
+      <link>https://notes.darkfunction.com/posts/dfgrok/</link>
+      <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/dfgrok/</guid>
+      <description>As developers we spend a lot of time sketching out class relationships and program flow in notebooks or on whiteboards, as a shared point of reference when communicating ideas or as a personal memory aid. A few months ago I discovered a handy online generator called yUML. It describes itself as being for &amp;ldquo;light, back-of-napkin style UML usage&amp;rdquo;, and provides a simple syntax that allows you to quickly type out class relationships which it then renders into basic, prettified UML.</description>
+    </item>
+    
+    <item>
+      <title>Handy UIViewController debug display</title>
+      <link>https://notes.darkfunction.com/posts/uiviewcontroller-debug/</link>
+      <pubDate>Thu, 20 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/uiviewcontroller-debug/</guid>
+      <description>When working with complex iOS projects with many screens, sometimes it can be annoying and time consuming to figure out exactly which class to start looking at when you want to make changes to a view controller. You can use this handy UIViewController category extension to display the name of the class on each screen. They are great reference points especially if you are jumping into a new codebase.
+#ifdef DEBUG #import &amp;quot;UIViewController+Debug.</description>
+    </item>
+    
+  </channel>
+</rss>

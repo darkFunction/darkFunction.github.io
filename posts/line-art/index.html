@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Taylor">
+<meta name="description" content="Learning and personal development blog">
+<meta name="generator" content="Hugo 0.31.1" />
+<title>Line art &middot; Sam Taylor</title>
+<link rel="shortcut icon" href="https://notes.darkfunction.com/images/favicon.ico">
+<link rel="stylesheet" href="https://notes.darkfunction.com/css/style.css">
+<link rel="stylesheet" href="https://notes.darkfunction.com/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="https://notes.darkfunction.com/css/monosocialiconsfont.css">
+
+
+
+<link href="https://notes.darkfunction.com/index.xml" rel="alternate" type="application/rss+xml" title="Sam Taylor" />
+
+
+<meta property="og:title" content="Line art" />
+<meta property="og:description" content="Built a line drawing tool inspired by linify.me.
+Made with a &ldquo;pin spacing&rdquo; option so that I can do this for real using cotton string and a wooden frame with pins. Bought the materials but need to update the code to output sequences of directions before attempting it. Initially written using a genetic algorithm, it worked but was waaaay too slow, so switched to subtracting the darkest lines between pins from the image." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://notes.darkfunction.com/posts/line-art/" />
+
+
+
+<meta property="article:published_time" content="2017-07-12T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-07-12T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Line art">
+<meta itemprop="description" content="Built a line drawing tool inspired by linify.me.
+Made with a &ldquo;pin spacing&rdquo; option so that I can do this for real using cotton string and a wooden frame with pins. Bought the materials but need to update the code to output sequences of directions before attempting it. Initially written using a genetic algorithm, it worked but was waaaay too slow, so switched to subtracting the darkest lines between pins from the image.">
+
+
+<meta itemprop="datePublished" content="2017-07-12T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-07-12T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="94">
+
+
+
+<meta itemprop="keywords" content="typescript," />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Line art"/>
+<meta name="twitter:description" content="Built a line drawing tool inspired by linify.me.
+Made with a &ldquo;pin spacing&rdquo; option so that I can do this for real using cotton string and a wooden frame with pins. Bought the materials but need to update the code to output sequences of directions before attempting it. Initially written using a genetic algorithm, it worked but was waaaay too slow, so switched to subtracting the darkest lines between pins from the image."/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkFunction"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://notes.darkfunction.com'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://notes.darkfunction.com/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Line art</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        July 12, 2017
+        <br>
+        
+        
+            
+                <a href="https://notes.darkfunction.com/tags/typescript">typescript</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>Built a line drawing tool inspired by <a href="http://linify.me/">linify.me</a>.</p>
+
+<p>Made with a &ldquo;pin spacing&rdquo; option so that I can do this for real using cotton string and a wooden frame with pins. Bought the materials but need to update the code to output sequences of directions before attempting it. Initially written using a genetic algorithm, it worked but was waaaay too slow, so switched to subtracting the darkest lines between pins from the image.</p>
+
+<script>
+function go() {
+    generate(
+        document.getElementById("lineDrawing"),
+        document.getElementById("original"),
+        document.getElementById("pinSpacing").value,
+        document.getElementById("numLines").value,
+        document.getElementById("darkness").value,
+        "/images/baby.png"
+    );
+}
+window.onload = function(e){ 
+    go();
+}
+</script>
+<form>
+    <table>
+    <tr><td>Pin spacing:</td><td><input type="text" name="pinSpacing" id="pinSpacing" value="4"></td></tr>
+    <tr><td>Lines: </td><td><input type="text" name="numLines" id="numLines" value="1600"></td></tr>
+    <tr><td>Darkness: </td><td><input type="text" name="darkness" id="darkness" value="0.1"></td></tr>
+    <tr><td><input type="button" value="Generate" onclick='go()' /></tr></td>
+    </table>
+</form>
+<canvas id="original" width="300" height="300"></canvas>
+<canvas id="lineDrawing" width="300" height="300"></canvas>
+<script src="/frameart/worker.js"></script>
+<script src="/frameart/main.js"></script>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    
+    <img class="avatar" src="https://notes.darkfunction.com/images/avatar.png">
+    <div>
+        <span class="dark">Sam Taylor</span>
+        <span>Author. Dreamweaver. Visionary. Plus actor.</span>
+    </div>
+    
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fnotes.darkfunction.com%2fposts%2fline-art%2f - Line%20art "><span class="icon-twitter">  </span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect">  </span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/ant-foraging-simulator/">Ant foraging simulator<aside class="dates">Jul 1 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/verbedujour/">Verbe Du Jour online!<aside class="dates">Jan 13 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/casinofairnesstesting/">Casino fairness testing<aside class="dates">Dec 13 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/codalorelease/">Codalo released! <aside class="dates">Nov 14 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/polypainter/">Painting with genetic algorithms<aside class="dates">Sep 28 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bitcoinircsentiment/">Bitcoin IRC sentiment analysis<aside class="dates">Oct 26 2013</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/gamedevone/">Game dev diary: 1<aside class="dates">Oct 26 2013</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/nsscotland_sunday/">NSScotland 2013: Sunday <aside class="dates">Oct 20 2013</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/nsscotland_saturday/">NSScotland 2013: Saturday <aside class="dates">Oct 19 2013</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/dfgrok/">Visualising Objective-C: Introducing DFGrok!<aside class="dates">Sep 4 2013</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/darkFunction">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/darkfunction/">
+        circlelinkedin
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkFunction">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2017 Sam Taylor
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://notes.darkfunction.com/js/main.js"></script>
+<script src="https://notes.darkfunction.com/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Sam Taylor</title>
+    <link>https://notes.darkfunction.com/tags/</link>
+    <description>Recent content in Tags on Sam Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 30 Aug 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://notes.darkfunction.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bitcoin</title>
+      <link>https://notes.darkfunction.com/tags/bitcoin/</link>
+      <pubDate>Fri, 30 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/tags/bitcoin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://notes.darkfunction.com/tags/c&#43;&#43;/</link>
+      <pubDate>Wed, 07 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crypto</title>
+      <link>https://notes.darkfunction.com/tags/crypto/</link>
+      <pubDate>Fri, 30 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/tags/crypto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Darkfunction Editor</title>
+      <link>https://notes.darkfunction.com/tags/darkfunction-editor/</link>
+      <pubDate>Sun, 03 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/tags/darkfunction-editor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flask</title>
+      <link>https://notes.darkfunction.com/tags/flask/</link>
+      <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lua</title>
+      <link>https://notes.darkfunction.com/tags/lua/</link>
+      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/tags/lua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Objective C</title>
+      <link>https://notes.darkfunction.com/tags/objective-c/</link>
+      <pubDate>Fri, 14 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/tags/objective-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://notes.darkfunction.com/tags/python/</link>
+      <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Typescript</title>
+      <link>https://notes.darkfunction.com/tags/typescript/</link>
+      <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

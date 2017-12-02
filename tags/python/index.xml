@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Sam Taylor</title>
+    <link>https://notes.darkfunction.com/tags/python/</link>
+    <description>Recent content in Python on Sam Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 13 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://notes.darkfunction.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Verbe Du Jour online!</title>
+      <link>https://notes.darkfunction.com/posts/verbedujour/</link>
+      <pubDate>Tue, 13 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/verbedujour/</guid>
+      <description>I&amp;rsquo;ve hacked together a new site in Flask to assist with learning French. The idea is that a new verb is chosen every day, and users are able to see all conjugations as well as search for other verbs. It has been great using Flask- it takes (almost) all of the pain out of web development. Definitely recommended! Clicky click: Learn French and Conjugate Your Verbs!
+Edit Been getting really good feedback over at Duolingo and Reddit, it&amp;rsquo;s really encouraging.</description>
+    </item>
+    
+    <item>
+      <title>Casino fairness testing</title>
+      <link>https://notes.darkfunction.com/posts/casinofairnesstesting/</link>
+      <pubDate>Sat, 13 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/casinofairnesstesting/</guid>
+      <description>Been playing around with Sikuli for automating a slots game and outputting the results to a simple Google Charts page on a local webserver. Got it running under Crunchbang and threw some machines up. Sikuli is a really good framework (maybe the best for multi-purpose Linux automation?), and while the fuzzy image search is a real time saver, it sucks at differentiating between colours. If two images are the same in all aspects except colour, it&amp;rsquo;s unreliable, and you need to start comparing pixels manually with java.</description>
+    </item>
+    
+    <item>
+      <title>Painting with genetic algorithms</title>
+      <link>https://notes.darkfunction.com/posts/polypainter/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://notes.darkfunction.com/posts/polypainter/</guid>
+      <description>Using genetic algorithms to build images from layers of translucent polygons.
+Inspired by this and also this.
+Just learning Python! The code is here: https://github.com/darkFunction/PolygonPainter.
+The old_painter directory contains an non-breeding strategy in which a single entity or &amp;lsquo;artist&amp;rsquo; is mutated according to a set of weightings, and un-mutated if the fitness is worse than it was before the change. This is similar to the Mona Lisa implementation linked above.</description>
+    </item>
+    
+  </channel>
+</rss>
