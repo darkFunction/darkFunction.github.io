@@ -9,7 +9,7 @@
 
 ### Profile {#profile}
 
-Developer with nine years of professional experience in building client mobile applications.
+Developer with twelve years of professional experience in building client mobile applications.
 
 ------
 
@@ -28,22 +28,27 @@ Developer with nine years of professional experience in building client mobile a
 
 ### Technical {#technical}
 
-1. Objective-C
+1. Objective-C / Swift
 1. XCode, Storyboards & AutoLayout
 1. OCMock
 1. Scripting (Python, Bash, Lua)
 1. CLI tools, Vim, regex
 1. Git
 1. Cocoapods
-1. C.I. (TeamCity, Jenkins) 
+1. C.I. (TeamCity, Jenkins, Slack) 
 1. Java, J2ME
 1. C++, 2D game dev
-1. Web (HTML, CSS, Flask)
+1. Web (HTML, CSS, JS, Flask)
 1. Parse, Protocol Buffers
 
 -------
 
 ### Experience {#experience}
+
+Utelly Ltd.
+: *Senior iOS Developer*
+  __2015-Present__
+Joined at an early stage as the second of three iOS developers responsible for building the iPhone and iPad experience. As Utelly is a small startup, developers play a flexible role and as such I contributed to product design and direction, set up of build systems, documentation, team tools, and methods of rapidly prototyping new themes and features for deployment, alongside building the application and encouraging good code and workflow practices. Was also involved in some research into computer vision and GPU programming (CUDA) which I hugely enjoyed.
 
 Badoo Ltd.
 : *Senior iOS Developer*
@@ -62,7 +67,7 @@ Cobra Mobile Ltd.
 
 ------
 
-### Education
+### Education {#education}
 
 University of Abertay Dundee
 : BSc Computing (Mobile Game Development) with Second Class Honours (1st Division) 
@@ -70,12 +75,13 @@ University of Abertay Dundee
 
 ------
 
-### Hobbies
-  DJ'ing, attempting to learn French, badminton, snowboarding, skating, poker, juggling, camping, and learning new programming frameworks, currently with a strong interest in Clojure and genetic programming. I have developed a few software products in my spare time which can be found on [darkfunction.com](http://darkfunction.com), my [tech blog](http://notes.darkfunction.com), and on my [GitHub profile](https://github.com/darkFunction).
+### Hobbies {#hobbies}
+
+  DJ'ing, making homebrew beer, learning French, badminton, snowboarding, skating, poker, chess, juggling, camping, and hoping to start playing amateur ice hockey this year. I have developed a few software products in my spare time which can be found on [darkfunction.com](http://darkfunction.com), my [tech blog](http://notes.darkfunction.com), and on my [GitHub profile](https://github.com/darkFunction). I also have a dog called Kolya who seems to get involved in most things!
 
 ------
 
-### References
+### References {#references}
   Available on request.
 
 ----- 
