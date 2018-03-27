@@ -23,7 +23,8 @@
 
 <meta property="og:title" content="French verbs crossword" />
 <meta property="og:description" content="Added a crossword section to VerbeDuJour for practicing the memorisation of infinitives.
-Clicky." />
+Clicky.
+function createTable(tableData) { var table = document.createElement(&#39;table&#39;); var tableBody = document.createElement(&#39;tbody&#39;); tableData.forEach(function(rowData) { var row = document.createElement(&#39;tr&#39;); rowData.forEach(function(cellData) { var cell = document.createElement(&#39;td&#39;); if (cellData) { cell.appendChild(document.createTextNode(cellData)); } row.appendChild(cell); }); tableBody.appendChild(row); }); table.appendChild(tableBody); document.body.appendChild(table); } function sortStringsByLength(stringArray: string[]) { return stringArray.sort((a, b) =&gt; { if (a.length &gt; b.length) { return -1; } if (b.length &gt; a.length) { return 1; } return 0; });	} type Coord = [number, number] // Represents a single entry in the crossword class Bar {	word: string; position: Coord; isDown: boolean; constructor(word: string, position: Coord, isDown: boolean) { this." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://darkfunction.github.io/posts/crossword/" />
 
@@ -47,12 +48,13 @@ Clicky." />
 
 <meta itemprop="name" content="French verbs crossword">
 <meta itemprop="description" content="Added a crossword section to VerbeDuJour for practicing the memorisation of infinitives.
-Clicky.">
+Clicky.
+function createTable(tableData) { var table = document.createElement(&#39;table&#39;); var tableBody = document.createElement(&#39;tbody&#39;); tableData.forEach(function(rowData) { var row = document.createElement(&#39;tr&#39;); rowData.forEach(function(cellData) { var cell = document.createElement(&#39;td&#39;); if (cellData) { cell.appendChild(document.createTextNode(cellData)); } row.appendChild(cell); }); tableBody.appendChild(row); }); table.appendChild(tableBody); document.body.appendChild(table); } function sortStringsByLength(stringArray: string[]) { return stringArray.sort((a, b) =&gt; { if (a.length &gt; b.length) { return -1; } if (b.length &gt; a.length) { return 1; } return 0; });	} type Coord = [number, number] // Represents a single entry in the crossword class Bar {	word: string; position: Coord; isDown: boolean; constructor(word: string, position: Coord, isDown: boolean) { this.">
 
 
 <meta itemprop="datePublished" content="2018-03-27T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-03-27T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="13">
+<meta itemprop="wordCount" content="1032">
 
 
 
@@ -60,7 +62,8 @@ Clicky.">
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="French verbs crossword"/>
 <meta name="twitter:description" content="Added a crossword section to VerbeDuJour for practicing the memorisation of infinitives.
-Clicky."/>
+Clicky.
+function createTable(tableData) { var table = document.createElement(&#39;table&#39;); var tableBody = document.createElement(&#39;tbody&#39;); tableData.forEach(function(rowData) { var row = document.createElement(&#39;tr&#39;); rowData.forEach(function(cellData) { var cell = document.createElement(&#39;td&#39;); if (cellData) { cell.appendChild(document.createTextNode(cellData)); } row.appendChild(cell); }); tableBody.appendChild(row); }); table.appendChild(tableBody); document.body.appendChild(table); } function sortStringsByLength(stringArray: string[]) { return stringArray.sort((a, b) =&gt; { if (a.length &gt; b.length) { return -1; } if (b.length &gt; a.length) { return 1; } return 0; });	} type Coord = [number, number] // Represents a single entry in the crossword class Bar {	word: string; position: Coord; isDown: boolean; constructor(word: string, position: Coord, isDown: boolean) { this."/>
 <meta name="twitter:site" content="@https://www.twitter.com/darkFunction"/>
 
 
@@ -109,6 +112,325 @@ Clicky."/>
 <p><a href="http://verbedujour.com/crossword">Clicky</a>.</p>
 
 <p><img src="/images/crossword.png" alt="Crossword preview" /></p>
+
+<pre><code class="language-typescript">function createTable(tableData) {
+  var table = document.createElement('table');
+  var tableBody = document.createElement('tbody');
+
+  tableData.forEach(function(rowData) {
+    var row = document.createElement('tr');
+
+    rowData.forEach(function(cellData) {
+      var cell = document.createElement('td');
+	  if (cellData) {
+	      cell.appendChild(document.createTextNode(cellData));
+		}
+	
+   		  row.appendChild(cell);
+    });
+
+    tableBody.appendChild(row);
+  });
+
+  table.appendChild(tableBody);
+  document.body.appendChild(table);
+}
+
+function sortStringsByLength(stringArray: string[]) {
+	return stringArray.sort((a, b) =&gt; {
+    	if (a.length &gt; b.length) {
+    		return -1;
+		}
+    	if (b.length &gt; a.length) {
+    		return 1;
+		}
+    	return 0;
+	});	
+}
+
+type Coord = [number, number]
+
+// Represents a single entry in the crossword
+class Bar {	
+	word: string;
+	position: Coord;
+	isDown: boolean;
+
+	constructor(word: string, position: Coord, isDown: boolean) {
+		this.word = word
+		this.position = position
+		this.isDown = isDown
+	}
+}
+
+class Rect {
+	x: number;
+	y: number;
+	w: number;
+	h: number;
+	
+	constructor(x: number, y: number, w: number, h: number) {
+		this.x = x; this.y = y; this.w = w; this.h = h;
+	}
+}
+
+class Crossword {
+
+	pool:Bar[] = []		// Unplaced words
+	actives:Bar[] = []  // Placed words
+
+    constructor(answers: string[]) { 
+
+		// Create Bars ordered by wordlength and add to pending pool
+		var sortedAnswers = sortStringsByLength(answers);
+		for (var answer of sortedAnswers) {
+			var bar = new Bar(answer.toUpperCase(), null, false);
+			this.pool.push(bar)
+		}
+	
+		// Add longest word to crossword at (0, 0) immediately
+		var firstBar:Bar = this.pool[0]
+		firstBar.position = [0, 0]
+		this.actives.push(firstBar)
+
+		this.build()
+	}
+
+	build() {
+		
+		for (var bar of this.pool) {
+			this.addBarToActives(bar)	
+		}	
+
+		// Tidy up stragglers that only have one connection 	
+		for (var pass=0; pass&lt;5; pass++) {			
+			for (var bar of this.actives) {
+				var score = this.barScore(bar)
+				if (score == 1) {
+					var index = this.actives.indexOf(bar) 
+					this.actives.splice(index, 1)
+					this.addBarToActives(bar)
+				}
+			}
+		}
+		//createTable(this.buildGrid())
+	}
+
+	barScore(bar: Bar): number {
+		var score = 0
+		for (var activeBar of this.actives) {	
+			if (activeBar == bar) {
+				continue
+			}
+			var collisionPoint = this.collisionPoint(bar, activeBar) 
+		
+			if (collisionPoint != null) {
+				// If different axis	
+				if (activeBar.isDown != bar.isDown) {  
+					if (bar.word[collisionPoint[0]] == activeBar.word[collisionPoint[1]]) {
+						// Same letter	
+						score = score + 1
+					} else {
+						// Letter conflict, not valid
+						return 0
+					}
+				} else { 
+					// Same axis and collide, not valid
+					return 0
+				}
+			} else {
+
+				// Test a 'neighbour' collision, ie, don't be right next to another word
+				var newRect = this.rectForBar(bar)
+				var activeRect = this.rectForBar(activeBar)
+				
+				// Make two sub-rects which pad activeRect by one on each side but cut off the corners
+				var activeRectWide = new Rect(activeRect.x - 1, activeRect.y, activeRect.w + 2, activeRect.h)
+				var activeRectHigh = new Rect(activeRect.x, activeRect.y - 1, activeRect.w, activeRect.h + 2)
+			
+				if (this.rectCollides(activeRectWide, newRect) || this.rectCollides(activeRectHigh, newRect)) {
+					return 0	
+				} 
+			}
+		}
+		return score
+	}
+
+	addBarToActives(newBar: Bar) {
+		if (this.actives.indexOf(newBar) &gt; -1) {
+			return
+		}	
+		var positions = this.positionsForWord(newBar.word)	
+		var bestPosition = null	
+		var highestScore = 0
+		for (var pos of positions) {
+			newBar.position = [pos[1], pos[2]]
+			newBar.isDown = pos[0]
+			// Score each position
+			var score = this.barScore(newBar)
+		
+			if (score &gt; 0) {
+				if (score &gt; highestScore) {
+					highestScore = score
+					bestPosition = pos
+				} else if (score == highestScore) {
+					// Decide between positions based on smallest extreme
+					newBar.position = [pos[1], pos[2]]
+					newBar.isDown = pos[0]
+					this.actives.push(newBar)
+					var newBoardRect = this.boardRect()
+				
+					newBar.position = [bestPosition[1], bestPosition[2]]
+					newBar.isDown = bestPosition[0]
+					var currentBoardRect = this.boardRect()
+
+					this.actives.splice(this.actives.indexOf(newBar), 1); 
+						
+					var wDiff = newBoardRect.w - currentBoardRect.w
+					var hDiff = newBoardRect.h - currentBoardRect.h
+					var diff = Math.abs(wDiff) &gt; Math.abs(hDiff) ? wDiff : hDiff	
+					if (diff &lt; 0) {
+						bestPosition = pos
+					}
+				}
+			}
+		}				
+		if (bestPosition != null) {
+			newBar.position = [bestPosition[1], bestPosition[2]]
+			newBar.isDown = bestPosition[0]
+			this.actives.push(newBar)
+		} else {
+			//console.log(&quot;Could not place word: &quot; + newBar.word)	
+		}
+	}
+
+	getActives() {
+		var boardRect = this.boardRect()
+		this.normaliseActives(boardRect)
+		return this.actives
+	}
+
+	buildGrid() {
+		var boardRect = this.boardRect()
+		this.normaliseActives(boardRect)
+		var grid = [[]]
+		for (var y=0; y&lt;boardRect.h; y++) {
+			grid[y] = []
+			for (var x=0; x&lt;boardRect.w; x++) {
+				grid[y][x] = null 
+			}
+		}
+		for (var activeBar of this.actives) {	
+			for (var i=0; i&lt;activeBar.word.length; i++) {
+				var x = activeBar.position[0]
+				var y = activeBar.position[1]
+				if (activeBar.isDown) {
+					grid[y + i][x] = activeBar.word[i]
+				} else {
+					grid[y][x + i] = activeBar.word[i]
+				}
+			}
+		}
+		return grid
+	}
+
+	boardRect(): Rect {
+		var minX = 0
+		var minY = 0
+		var maxX = 0
+		var maxY = 0
+		for (var activeBar of this.actives) {	
+			var x = activeBar.position[0]
+			var y = activeBar.position[1]
+			var len = activeBar.word.length
+			if (x &lt; minX)
+				minX = x	
+			if (y &lt; minY)
+				minY = y	
+			
+			if (activeBar.isDown) 
+				y += len
+			else
+				x += len
+
+			if (x &gt; maxX) 
+				maxX = x
+			if (y &gt; maxY) 
+				maxY = y
+		}
+
+		return new Rect(minX, minY, maxX - minX, maxY - minY)
+	}
+
+	normaliseActives(boardRect: Rect) {
+		for (var activeBar of this.actives) {	
+			activeBar.position[0] -= boardRect.x
+			activeBar.position[1] -= boardRect.y
+		}
+	}
+
+	rectCollides(a: Rect, b: Rect) : boolean {
+		if (a.x + a.w &lt;= b.x) return false
+		if (a.x &gt;= b.x + b.w) return false
+		if (a.y + a.h &lt;= b.y) return false
+		if (a.y &gt;= b.y + b.h) return false
+		return true
+	}
+		
+	rectForBar(bar: Bar): Rect {
+		var w = bar.isDown ? 1 : bar.word.length
+		var h = bar.isDown ? bar.word.length : 1
+		return new Rect(bar.position[0], bar.position[1], w, h)
+	}
+
+	// Find letter indices which are the points of intersection between two bars	
+	collisionPoint(bar1: Bar, bar2: Bar) : Coord {
+		if (! this.rectCollides(this.rectForBar(bar1), this.rectForBar(bar2))) 
+			return null
+
+		var hBar = bar1.isDown ? bar2 : bar1
+		var vBar = bar1.isDown ? bar1 : bar2	
+		
+		var vPoint = hBar.position[1] - vBar.position[1]
+		var hPoint = vBar.position[0] - hBar.position[0]
+
+		return bar1 == hBar ? [hPoint, vPoint] : [vPoint, hPoint]
+	}
+
+	// Find viable positions on every active bar
+	positionsForWord(word: string) {
+		var positions = []
+		for (var activeBar of this.actives) {	
+			var crosspoints = this.crosspoints(word, activeBar.word)
+			var isDown = !activeBar.isDown
+			var anchor = activeBar.position
+			for (var xp of crosspoints) {
+				var x = isDown ? anchor[0] + xp[1] : anchor[0] - xp[0] 
+				var y = isDown ? anchor[1] - xp[0] : anchor[1] + xp[1]
+				var pos = [isDown, x, y]	
+				positions.push(pos)
+			}				
+		}
+		return positions
+	}	
+
+	// Find letter indices where strings cross
+	crosspoints(str1: string, str2:string) {
+		var crosspoints = []
+
+		for (var i=0; i&lt;str1.length; i++) {
+			var c1 = str1[i]
+			for (var j=0; j&lt;str2.length; j++) {
+				var c2 = str2[j]
+				if (c1 == c2) {
+					crosspoints.push([i, j])	
+				}					
+			}
+		}	
+		return crosspoints
+	}
+}
+</code></pre>
 
     </section>
 </article>
