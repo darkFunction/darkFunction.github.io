@@ -6,10 +6,20 @@
     <description>Recent content in Flask on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 13 Jan 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darkfunction.github.io/tags/flask/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>French verbs crossword</title>
+      <link>https://darkfunction.github.io/posts/crossword/</link>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkfunction.github.io/posts/crossword/</guid>
+      <description>Added a crossword section to VerbeDuJour for practicing the memorisation of infinitives.
+Clicky.</description>
+    </item>
     
     <item>
       <title>Verbe Du Jour online!</title>
