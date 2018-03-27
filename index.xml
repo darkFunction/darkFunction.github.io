@@ -18,8 +18,8 @@
       
       <guid>https://darkfunction.github.io/posts/crossword/</guid>
       <description>Added a crossword section to VerbeDuJour for practicing the memorisation of infinitives.
-Below is the Typescript utility which takes an array of answers and compresses them into a crossword table with as many crossover points as possible.
-function createTable(tableData) { var table = document.createElement(&#39;table&#39;); var tableBody = document.createElement(&#39;tbody&#39;); tableData.forEach(function(rowData) { var row = document.createElement(&#39;tr&#39;); rowData.forEach(function(cellData) { var cell = document.createElement(&#39;td&#39;); if (cellData) { cell.appendChild(document.createTextNode(cellData)); } row.appendChild(cell); }); tableBody.appendChild(row); }); table.appendChild(tableBody); document.</description>
+Below is the Typescript utility which takes an array of answers and compresses them into a crossword table with as many crossover points as possible. This allows the site to dynamically generate crosswords every month from daily verbs.
+function createTable(tableData) { var table = document.createElement(&#39;table&#39;); var tableBody = document.createElement(&#39;tbody&#39;); tableData.forEach(function(rowData) { var row = document.createElement(&#39;tr&#39;); rowData.forEach(function(cellData) { var cell = document.</description>
     </item>
     
     <item>
