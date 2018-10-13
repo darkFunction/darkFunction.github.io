@@ -6,10 +6,20 @@
     <description>Recent content on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 27 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darkfunction.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Playing with the Bitcoin protocol in Swift</title>
+      <link>https://darkfunction.github.io/posts/swiftbtc/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkfunction.github.io/posts/swiftbtc/</guid>
+      <description>Wanted to explore the Bitcoin protocol in a more hands-on way so wrote an application in Swift which can generate Bitcoin addresses and establish a connection to a node on the network, exchanging version information.
+Source code here: https://github.com/darkfunction/swiftbtc</description>
+    </item>
     
     <item>
       <title>French verbs crossword</title>

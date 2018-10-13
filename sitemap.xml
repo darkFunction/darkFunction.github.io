@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://darkfunction.github.io/posts/swiftbtc/</loc>
+    <lastmod>2018-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://darkfunction.github.io/posts/crossword/</loc>
     <lastmod>2018-03-27T00:00:00+00:00</lastmod>
   </url>
@@ -148,6 +153,12 @@
   </url>
   
   <url>
+    <loc>https://darkfunction.github.io/tags/</loc>
+    <lastmod>2018-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://darkfunction.github.io/categories/articles/</loc>
     <lastmod>2013-01-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -184,14 +195,14 @@
   </url>
   
   <url>
-    <loc>https://darkfunction.github.io/categories/darkfunction-editor/</loc>
-    <lastmod>2011-11-18T00:00:00+00:00</lastmod>
+    <loc>https://darkfunction.github.io/tags/darkfunction-editor/</loc>
+    <lastmod>2013-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://darkfunction.github.io/tags/darkfunction-editor/</loc>
-    <lastmod>2013-02-03T00:00:00+00:00</lastmod>
+    <loc>https://darkfunction.github.io/categories/darkfunction-editor/</loc>
+    <lastmod>2011-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -203,7 +214,7 @@
   
   <url>
     <loc>https://darkfunction.github.io/tags/js/</loc>
-    <lastmod>2018-03-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -227,7 +238,7 @@
   
   <url>
     <loc>https://darkfunction.github.io/posts/</loc>
-    <lastmod>2018-03-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -239,13 +250,19 @@
   
   <url>
     <loc>https://darkfunction.github.io/</loc>
-    <lastmod>2018-03-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darkfunction.github.io/tags/swift/</loc>
+    <lastmod>2018-04-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darkfunction.github.io/tags/</loc>
-    <lastmod>2013-08-30T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

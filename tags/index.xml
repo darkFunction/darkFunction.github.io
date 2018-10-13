@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 30 Aug 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darkfunction.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://darkfunction.github.io/tags/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkfunction.github.io/tags/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bitcoin</title>
@@ -59,7 +68,7 @@
     <item>
       <title>Js</title>
       <link>https://darkfunction.github.io/tags/js/</link>
-      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://darkfunction.github.io/tags/js/</guid>
       <description></description>
@@ -89,6 +98,15 @@
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://darkfunction.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swift</title>
+      <link>https://darkfunction.github.io/tags/swift/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkfunction.github.io/tags/swift/</guid>
       <description></description>
     </item>
     
