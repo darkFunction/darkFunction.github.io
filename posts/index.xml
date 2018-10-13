@@ -18,7 +18,8 @@
       
       <guid>https://darkfunction.github.io/posts/ticketsamaritan/</guid>
       <description>Built a website and API backend (https://www.ticketsamaritan.uk/) using Vapor after attending Serverside.swift conference in Berlin. I explored serverless technologies offered by IBM but ultimately Vapor turned out to be a great option and Vapor Cloud especially makes for easy deployment and database hosting.
-The site is for travellers to share free tickets and has received postive responses on Reddit. I think it needs a simple app to be really useful but since the API is done this is something that can be put together pretty quickly in the future.</description>
+The hardest part was getting presigned forms working for user image uploads to Amazon S3. I released a tiny util for generating form policies.
+The site is for travellers to share free tickets and has received postive responses on Reddit.</description>
     </item>
     
     <item>
