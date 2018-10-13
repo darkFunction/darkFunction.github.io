@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Taylor">
+<meta name="description" content="Learning and personal development blog">
+<meta name="generator" content="Hugo 0.38.2" />
+<title>Datascience exploration: WTA Height Advantages &middot; Sam Taylor</title>
+<link rel="shortcut icon" href="https://darkfunction.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://darkfunction.github.io/css/style.css">
+<link rel="stylesheet" href="https://darkfunction.github.io/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="https://darkfunction.github.io/css/monosocialiconsfont.css">
+
+
+
+<link href="https://darkfunction.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Taylor" />
+
+
+<meta property="og:title" content="Datascience exploration: WTA Height Advantages" />
+<meta property="og:description" content="I&rsquo;ve been playing with Pandas and the Jupyter Notebook to learn how to clean up and extract insights from large datasets. Here&rsquo;s an example of discovering the relationship between player height and win %.
+What advantage does height infer in Women&rsquo;s Tennis? Using dataset: https://www.kaggle.com/joaoevangelista/wta-matches-and-rankings#wta.zip
+import pandas as pd %matplotlib inline import matplotlib.pyplot as plt df = pd.read_csv(&#39;/Users/sam/Downloads/wta/matches.csv&#39;, low_memory=False, dtype={ }) df.shape  (50577, 33)  df.head()   ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darkfunction.github.io/posts/wtaheightadv/" />
+
+
+
+<meta property="article:published_time" content="2018-09-11T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-09-11T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Datascience exploration: WTA Height Advantages">
+<meta itemprop="description" content="I&rsquo;ve been playing with Pandas and the Jupyter Notebook to learn how to clean up and extract insights from large datasets. Here&rsquo;s an example of discovering the relationship between player height and win %.
+What advantage does height infer in Women&rsquo;s Tennis? Using dataset: https://www.kaggle.com/joaoevangelista/wta-matches-and-rankings#wta.zip
+import pandas as pd %matplotlib inline import matplotlib.pyplot as plt df = pd.read_csv(&#39;/Users/sam/Downloads/wta/matches.csv&#39;, low_memory=False, dtype={ }) df.shape  (50577, 33)  df.head()   .">
+
+
+<meta itemprop="datePublished" content="2018-09-11T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-09-11T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="555">
+
+
+
+<meta itemprop="keywords" content="python,datascience," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Datascience exploration: WTA Height Advantages"/>
+<meta name="twitter:description" content="I&rsquo;ve been playing with Pandas and the Jupyter Notebook to learn how to clean up and extract insights from large datasets. Here&rsquo;s an example of discovering the relationship between player height and win %.
+What advantage does height infer in Women&rsquo;s Tennis? Using dataset: https://www.kaggle.com/joaoevangelista/wta-matches-and-rankings#wta.zip
+import pandas as pd %matplotlib inline import matplotlib.pyplot as plt df = pd.read_csv(&#39;/Users/sam/Downloads/wta/matches.csv&#39;, low_memory=False, dtype={ }) df.shape  (50577, 33)  df.head()   ."/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkFunction"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://darkfunction.github.io'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://darkfunction.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Datascience exploration: WTA Height Advantages</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        September 11, 2018
+        <br>
+        
+        
+            
+                <a href="https://darkfunction.github.io/tags/python">python</a>
+            
+                <a href="https://darkfunction.github.io/tags/datascience">datascience</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>I&rsquo;ve been playing with Pandas and the Jupyter Notebook to learn how to clean up and extract insights from large datasets. Here&rsquo;s an example of discovering the relationship between player height and win %.</p>
+
+<h3 id="what-advantage-does-height-infer-in-women-s-tennis">What advantage does height infer in Women&rsquo;s Tennis?</h3>
+
+<p>Using dataset: <a href="https://www.kaggle.com/joaoevangelista/wta-matches-and-rankings#wta.zip">https://www.kaggle.com/joaoevangelista/wta-matches-and-rankings#wta.zip</a></p>
+
+<pre><code class="language-python">import pandas as pd 
+%matplotlib inline
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('/Users/sam/Downloads/wta/matches.csv', low_memory=False, dtype={
+})
+df.shape
+</code></pre>
+
+<pre><code>(50577, 33)
+</code></pre>
+
+<pre><code class="language-python">df.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>best_of</th>
+      <th>draw_size</th>
+      <th>loser_age</th>
+      <th>loser_entry</th>
+      <th>loser_hand</th>
+      <th>loser_ht</th>
+      <th>loser_id</th>
+      <th>loser_ioc</th>
+      <th>loser_name</th>
+      <th>loser_rank</th>
+      <th>...</th>
+      <th>winner_hand</th>
+      <th>winner_ht</th>
+      <th>winner_id</th>
+      <th>winner_ioc</th>
+      <th>winner_name</th>
+      <th>winner_rank</th>
+      <th>winner_rank_points</th>
+      <th>winner_seed</th>
+      <th>year</th>
+      <th>Unnamed: 32</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>128</td>
+      <td>17.859001</td>
+      <td>NaN</td>
+      <td>R</td>
+      <td>NaN</td>
+      <td>200002</td>
+      <td>CRO</td>
+      <td>Mirjana Lucic</td>
+      <td>49.0</td>
+      <td>...</td>
+      <td>R</td>
+      <td>170.0</td>
+      <td>200001.0</td>
+      <td>SUI</td>
+      <td>Martina Hingis</td>
+      <td>1.0</td>
+      <td>6003.0</td>
+      <td>1.0</td>
+      <td>2000.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>128</td>
+      <td>27.118412</td>
+      <td>Q</td>
+      <td>R</td>
+      <td>NaN</td>
+      <td>200004</td>
+      <td>AUS</td>
+      <td>Kerry Anne Guse</td>
+      <td>133.0</td>
+      <td>...</td>
+      <td>R</td>
+      <td>167.0</td>
+      <td>200003.0</td>
+      <td>BEL</td>
+      <td>Justine Henin</td>
+      <td>63.0</td>
+      <td>510.0</td>
+      <td>NaN</td>
+      <td>2000.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>128</td>
+      <td>31.378508</td>
+      <td>NaN</td>
+      <td>R</td>
+      <td>NaN</td>
+      <td>200005</td>
+      <td>USA</td>
+      <td>Jolene Watanabe Giltz</td>
+      <td>118.0</td>
+      <td>...</td>
+      <td>R</td>
+      <td>NaN</td>
+      <td>200006.0</td>
+      <td>SVK</td>
+      <td>Karina Habsudova</td>
+      <td>53.0</td>
+      <td>574.0</td>
+      <td>NaN</td>
+      <td>2000.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>128</td>
+      <td>22.006845</td>
+      <td>NaN</td>
+      <td>R</td>
+      <td>NaN</td>
+      <td>200007</td>
+      <td>CRO</td>
+      <td>Silvija Talaja</td>
+      <td>23.0</td>
+      <td>...</td>
+      <td>R</td>
+      <td>182.0</td>
+      <td>200008.0</td>
+      <td>AUS</td>
+      <td>Alicia Molik</td>
+      <td>116.0</td>
+      <td>245.0</td>
+      <td>NaN</td>
+      <td>2000.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>128</td>
+      <td>24.821355</td>
+      <td>NaN</td>
+      <td>R</td>
+      <td>NaN</td>
+      <td>200010</td>
+      <td>ITA</td>
+      <td>Rita Grande</td>
+      <td>60.0</td>
+      <td>...</td>
+      <td>R</td>
+      <td>165.0</td>
+      <td>200009.0</td>
+      <td>THA</td>
+      <td>Tamarine Tanasugarn</td>
+      <td>72.0</td>
+      <td>439.0</td>
+      <td>NaN</td>
+      <td>2000.0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 33 columns</p>
+</div>
+
+<pre><code class="language-python">df.year.value_counts().sort_index()
+</code></pre>
+
+<pre><code>2000.0    2893
+2001.0    3098
+2002.0    3140
+2003.0    2930
+2004.0    2805
+2005.0    2843
+2006.0    2787
+2007.0    2778
+2008.0    2790
+2009.0    2722
+2010.0    2781
+2011.0    2804
+2012.0    2910
+2013.0    2776
+2014.0    2785
+2015.0    2651
+2016.0    2900
+2017.0    2181
+Name: year, dtype: int64
+</code></pre>
+
+<p>We have data on 50577 matches from 2000-2007</p>
+
+<pre><code class="language-python"># Clean data
+df.drop(df[df['winner_ht'] == 'R'].index, inplace=True, axis='rows')
+df['winner_ht'] = df['winner_ht'].astype(float)
+df.drop(df.columns[df.columns.str.contains('unnamed',case = False)], axis=1, inplace=True)
+</code></pre>
+
+<pre><code class="language-python"># New subset
+hts = pd.DataFrame(df[['winner_ht', 'loser_ht']])
+hts.dropna(inplace=True)
+
+# Add absolute height difference column
+hts['ht_diff'] = abs(hts['winner_ht'] - hts['loser_ht'])
+
+# Add boolean 'taller player won' column
+hts['winner_taller'] = hts['winner_ht'] &gt; hts['loser_ht']
+
+hts.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>winner_ht</th>
+      <th>loser_ht</th>
+      <th>ht_diff</th>
+      <th>winner_taller</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>42</th>
+      <td>163.0</td>
+      <td>168.0</td>
+      <td>5.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>180.0</td>
+      <td>170.0</td>
+      <td>10.0</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>165.0</td>
+      <td>169.0</td>
+      <td>4.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>170.0</td>
+      <td>167.0</td>
+      <td>3.0</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>168.0</td>
+      <td>158.0</td>
+      <td>10.0</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Let&rsquo;s check how many matches we have for each absolute height difference:</p>
+
+<pre><code class="language-python">hts.ht_diff.value_counts()
+</code></pre>
+
+<pre><code>2.0     1764
+3.0     1704
+5.0     1627
+7.0     1499
+1.0     1434
+4.0     1397
+6.0     1304
+8.0     1248
+10.0    1209
+9.0      997
+12.0     899
+11.0     892
+0.0      889
+13.0     632
+14.0     604
+15.0     553
+16.0     450
+17.0     430
+19.0     290
+18.0     278
+20.0     186
+21.0     159
+22.0     104
+23.0      78
+24.0      46
+25.0      39
+27.0      27
+26.0      20
+29.0      13
+28.0      12
+31.0       6
+32.0       3
+30.0       2
+Name: ht_diff, dtype: int64
+</code></pre>
+
+<pre><code class="language-python"># Remove rows where there was no difference in height (as 'winner_taller' always false)
+hts.drop(hts[hts.ht_diff == 0].index, inplace=True)
+
+# Remove heights differences for which we don't have enough data
+hts.drop(hts[hts.ht_diff &gt; 23].index, inplace=True)
+hts.shape
+</code></pre>
+
+<pre><code>(19738, 4)
+</code></pre>
+
+<p>We ended up with 19,738 matches where there was a height difference, for which we have enough data to make a meaningful comparison</p>
+
+<pre><code class="language-python"># Plot the absolute height difference against the mean of whether taller player won (0.0 -&gt; 1.0)
+plt.figure(figsize=(10,5))
+plt.plot(hts.groupby('ht_diff')['winner_taller'].mean())
+plt.xlabel('Height difference (cm)')
+plt.ylabel('Taller player win %')
+plt.show()
+</code></pre>
+
+<p><img src="output_11_0.png" alt="png" /></p>
+
+<pre><code class="language-python">
+</code></pre>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    
+    <img class="avatar" src="https://darkfunction.github.io/images/avatar.png">
+    <div>
+        <span class="dark">Sam Taylor</span>
+        <span>Edinburgh, UK</span>
+    </div>
+    
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fdarkfunction.github.io%2fposts%2fwtaheightadv%2f - Datascience%20exploration%3a%20WTA%20Height%20Advantages "><span class="icon-twitter">  </span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect">  </span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/swiftbtc/">Playing with the Bitcoin protocol in Swift<aside class="dates">Apr 25 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/crossword/">French verbs crossword<aside class="dates">Mar 27 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/line-art/">Line art<aside class="dates">Jul 12 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ant-foraging-simulator/">Ant foraging simulator<aside class="dates">Jul 1 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/verbedujour/">Verbe Du Jour online!<aside class="dates">Jan 13 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/casinofairnesstesting/">Casino fairness testing<aside class="dates">Dec 13 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/codalorelease/">Codalo released! <aside class="dates">Nov 14 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/polypainter/">Painting with genetic algorithms<aside class="dates">Sep 28 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bitcoinircsentiment/">Bitcoin IRC sentiment analysis<aside class="dates">Oct 26 2013</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/gamedevone/">Game dev diary: 1<aside class="dates">Oct 26 2013</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/darkFunction">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/darkfunction/">
+        circlelinkedin
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkFunction">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Sam Taylor
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://darkfunction.github.io/js/main.js"></script>
+<script src="https://darkfunction.github.io/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>
