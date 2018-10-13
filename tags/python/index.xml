@@ -23,6 +23,16 @@ import pandas as pd %matplotlib inline import matplotlib.pyplot as plt df = pd.r
     </item>
     
     <item>
+      <title>Identifying cryptrocurrency spam/hype cycles on Twitter</title>
+      <link>https://darkfunction.github.io/posts/cointweets/</link>
+      <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkfunction.github.io/posts/cointweets/</guid>
+      <description>Inspired by a very interesting Defcon presentation about stock spammers from 2011, I thought it would be interesting (and maybe profitable?) to monitor the frequency of low-cap cryptocurrency mentions on Twitter, the theory being that pump groups and spammers are likely to &amp;lsquo;hype&amp;rsquo; coins before/during large buys in order to manipulate more people into buying.
+The free tier on the Twitter streaming API allows you to monitor 400 different terms so I chose to observe the Twitter stock symbol &amp;lsquo;$&amp;rsquo; followed by the coin abbreviations, for example $SIA is Siacoin.</description>
+    </item>
+    
+    <item>
       <title>French verbs crossword</title>
       <link>https://darkfunction.github.io/posts/crossword/</link>
       <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>

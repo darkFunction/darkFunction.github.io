@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://darkfunction.github.io/posts/cointweets/</loc>
+    <lastmod>2018-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://darkfunction.github.io/posts/swiftbtc/</loc>
     <lastmod>2018-04-25T00:00:00+00:00</lastmod>
   </url>
@@ -194,14 +199,20 @@
   </url>
   
   <url>
-    <loc>https://darkfunction.github.io/categories/darkfunction-editor/</loc>
-    <lastmod>2011-11-18T00:00:00+00:00</lastmod>
+    <loc>https://darkfunction.github.io/tags/cryptocurrency/</loc>
+    <lastmod>2018-09-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://darkfunction.github.io/tags/darkfunction-editor/</loc>
     <lastmod>2013-02-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://darkfunction.github.io/categories/darkfunction-editor/</loc>
+    <lastmod>2011-11-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

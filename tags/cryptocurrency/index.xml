@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptocurrency on Sam Taylor</title>
+    <link>https://darkfunction.github.io/tags/cryptocurrency/</link>
+    <description>Recent content in Cryptocurrency on Sam Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 08 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://darkfunction.github.io/tags/cryptocurrency/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Identifying cryptrocurrency spam/hype cycles on Twitter</title>
+      <link>https://darkfunction.github.io/posts/cointweets/</link>
+      <pubDate>Sat, 08 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkfunction.github.io/posts/cointweets/</guid>
+      <description>Inspired by a very interesting Defcon presentation about stock spammers from 2011, I thought it would be interesting (and maybe profitable?) to monitor the frequency of low-cap cryptocurrency mentions on Twitter, the theory being that pump groups and spammers are likely to &amp;lsquo;hype&amp;rsquo; coins before/during large buys in order to manipulate more people into buying.
+The free tier on the Twitter streaming API allows you to monitor 400 different terms so I chose to observe the Twitter stock symbol &amp;lsquo;$&amp;rsquo; followed by the coin abbreviations, for example $SIA is Siacoin.</description>
+    </item>
+    
+  </channel>
+</rss>

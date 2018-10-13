@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Taylor">
+<meta name="description" content="Learning and personal development blog">
+<meta name="generator" content="Hugo 0.38.2" />
+<title>Identifying cryptrocurrency spam/hype cycles on Twitter &middot; Sam Taylor</title>
+<link rel="shortcut icon" href="https://darkfunction.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://darkfunction.github.io/css/style.css">
+<link rel="stylesheet" href="https://darkfunction.github.io/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="https://darkfunction.github.io/css/monosocialiconsfont.css">
+
+
+
+<link href="https://darkfunction.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Taylor" />
+
+
+<meta property="og:title" content="Identifying cryptrocurrency spam/hype cycles on Twitter" />
+<meta property="og:description" content="Inspired by a very interesting Defcon presentation about stock spammers from 2011, I thought it would be interesting (and maybe profitable?) to monitor the frequency of low-cap cryptocurrency mentions on Twitter, the theory being that pump groups and spammers are likely to &lsquo;hype&rsquo; coins before/during large buys in order to manipulate more people into buying.
+The free tier on the Twitter streaming API allows you to monitor 400 different terms so I chose to observe the Twitter stock symbol &lsquo;$&rsquo; followed by the coin abbreviations, for example $SIA is Siacoin." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darkfunction.github.io/posts/cointweets/" />
+
+
+
+<meta property="article:published_time" content="2018-09-08T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-09-08T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Identifying cryptrocurrency spam/hype cycles on Twitter">
+<meta itemprop="description" content="Inspired by a very interesting Defcon presentation about stock spammers from 2011, I thought it would be interesting (and maybe profitable?) to monitor the frequency of low-cap cryptocurrency mentions on Twitter, the theory being that pump groups and spammers are likely to &lsquo;hype&rsquo; coins before/during large buys in order to manipulate more people into buying.
+The free tier on the Twitter streaming API allows you to monitor 400 different terms so I chose to observe the Twitter stock symbol &lsquo;$&rsquo; followed by the coin abbreviations, for example $SIA is Siacoin.">
+
+
+<meta itemprop="datePublished" content="2018-09-08T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-09-08T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="186">
+
+
+
+<meta itemprop="keywords" content="python,cryptocurrency," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Identifying cryptrocurrency spam/hype cycles on Twitter"/>
+<meta name="twitter:description" content="Inspired by a very interesting Defcon presentation about stock spammers from 2011, I thought it would be interesting (and maybe profitable?) to monitor the frequency of low-cap cryptocurrency mentions on Twitter, the theory being that pump groups and spammers are likely to &lsquo;hype&rsquo; coins before/during large buys in order to manipulate more people into buying.
+The free tier on the Twitter streaming API allows you to monitor 400 different terms so I chose to observe the Twitter stock symbol &lsquo;$&rsquo; followed by the coin abbreviations, for example $SIA is Siacoin."/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkFunction"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://darkfunction.github.io'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://darkfunction.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Identifying cryptrocurrency spam/hype cycles on Twitter</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        September 8, 2018
+        <br>
+        
+        
+            
+                <a href="https://darkfunction.github.io/tags/python">python</a>
+            
+                <a href="https://darkfunction.github.io/tags/cryptocurrency">cryptocurrency</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>Inspired by a very interesting <a href="https://youtu.be/ytDamqTjPwg">Defcon presentation about stock spammers</a> from 2011, I thought it would be interesting (and maybe profitable?) to monitor the frequency of low-cap cryptocurrency mentions on Twitter, the theory being that pump groups and spammers are likely to &lsquo;hype&rsquo; coins before/during large buys in order to manipulate more people into buying.</p>
+
+<p>The free tier on the Twitter streaming API allows you to monitor 400 different terms so I chose to observe the Twitter stock symbol &lsquo;$&rsquo; followed by the coin abbreviations, for example $SIA is Siacoin. Ideally we could monitor more intelligently by using smarter rules around which coin a tweet is referring to, but as a starting point this seemed pretty good as the &lsquo;$&rsquo; symbol seems to have been fairly widely adopted across Twitter for crypto market discussion.</p>
+
+<p>I collected a few samples across a few days at different points but didn&rsquo;t see any correlation between sudden Tweet frequency spikes and price. This is just a first exploration and I think it would be useful to plot alongside the coin price on the same graph rather than doing manual comparisons.</p>
+
+<p><img src="/images/tweets.png" alt="Tweets" /></p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    
+    <img class="avatar" src="https://darkfunction.github.io/images/avatar.png">
+    <div>
+        <span class="dark">Sam Taylor</span>
+        <span>Edinburgh, UK</span>
+    </div>
+    
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fdarkfunction.github.io%2fposts%2fcointweets%2f - Identifying%20cryptrocurrency%20spam%2fhype%20cycles%20on%20Twitter "><span class="icon-twitter">  </span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect">  </span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/wtaheightadv/">Datascience exploration: WTA Height Advantages<aside class="dates">Sep 11 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/swiftbtc/">Playing with the Bitcoin protocol in Swift<aside class="dates">Apr 25 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/crossword/">French verbs crossword<aside class="dates">Mar 27 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/line-art/">Line art<aside class="dates">Jul 12 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ant-foraging-simulator/">Ant foraging simulator<aside class="dates">Jul 1 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/verbedujour/">Verbe Du Jour online!<aside class="dates">Jan 13 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/casinofairnesstesting/">Casino fairness testing<aside class="dates">Dec 13 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/codalorelease/">Codalo released! <aside class="dates">Nov 14 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/polypainter/">Painting with genetic algorithms<aside class="dates">Sep 28 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/bitcoinircsentiment/">Bitcoin IRC sentiment analysis<aside class="dates">Oct 26 2013</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/darkFunction">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/darkfunction/">
+        circlelinkedin
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkFunction">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Sam Taylor
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://darkfunction.github.io/js/main.js"></script>
+<script src="https://darkfunction.github.io/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>
