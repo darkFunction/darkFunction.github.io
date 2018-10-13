@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Sam Taylor">
+<meta name="description" content="Learning and personal development blog">
+<meta name="generator" content="Hugo 0.38.2" />
+<title>Datascience exploration 2: ELO performance vs bet profitability in tennis &middot; Sam Taylor</title>
+<link rel="shortcut icon" href="https://darkfunction.github.io/images/favicon.ico">
+<link rel="stylesheet" href="https://darkfunction.github.io/css/style.css">
+<link rel="stylesheet" href="https://darkfunction.github.io/css/highlight.css">
+
+
+
+<link rel="stylesheet" href="https://darkfunction.github.io/css/monosocialiconsfont.css">
+
+
+
+<link href="https://darkfunction.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Taylor" />
+
+
+<meta property="og:title" content="Datascience exploration 2: ELO performance vs bet profitability in tennis" />
+<meta property="og:description" content="I wrote a function to genetically evolve the parameters to an ELO algorithm (code not included here) and compared the performance of these parameters across bookmakers when using the ELO prediction to place hypothetical bets. Interestingly there is a tiny advantage if you can secure the absolute best odds. The underdogs with higher ELO looks too good to be true and that&rsquo;s because the number of available bets where an underdog has a higher ELO is very small." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darkfunction.github.io/posts/elo-tennis/" />
+
+
+
+<meta property="article:published_time" content="2018-09-12T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-09-12T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Datascience exploration 2: ELO performance vs bet profitability in tennis">
+<meta itemprop="description" content="I wrote a function to genetically evolve the parameters to an ELO algorithm (code not included here) and compared the performance of these parameters across bookmakers when using the ELO prediction to place hypothetical bets. Interestingly there is a tiny advantage if you can secure the absolute best odds. The underdogs with higher ELO looks too good to be true and that&rsquo;s because the number of available bets where an underdog has a higher ELO is very small.">
+
+
+<meta itemprop="datePublished" content="2018-09-12T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-09-12T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="634">
+
+
+
+<meta itemprop="keywords" content="python,datascience," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Datascience exploration 2: ELO performance vs bet profitability in tennis"/>
+<meta name="twitter:description" content="I wrote a function to genetically evolve the parameters to an ELO algorithm (code not included here) and compared the performance of these parameters across bookmakers when using the ELO prediction to place hypothetical bets. Interestingly there is a tiny advantage if you can secure the absolute best odds. The underdogs with higher ELO looks too good to be true and that&rsquo;s because the number of available bets where an underdog has a higher ELO is very small."/>
+<meta name="twitter:site" content="@https://www.twitter.com/darkFunction"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='https://darkfunction.github.io'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="https://darkfunction.github.io/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Datascience exploration 2: ELO performance vs bet profitability in tennis</h1>
+        <h2 class="subtitle"></h2>
+        <h2 class="headline">
+        September 12, 2018
+        <br>
+        
+        
+            
+                <a href="https://darkfunction.github.io/tags/python">python</a>
+            
+                <a href="https://darkfunction.github.io/tags/datascience">datascience</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        <p>I wrote a function to genetically evolve the parameters to an ELO algorithm (code not included here) and compared the performance of these parameters across bookmakers when using the ELO prediction to place hypothetical bets. Interestingly there is a tiny advantage if you can secure the absolute best odds. The underdogs with higher ELO looks too good to be true and that&rsquo;s because the number of available bets where an underdog has a higher ELO is very small.</p>
+
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+from collections import namedtuple
+
+%matplotlib inline 
+</code></pre>
+
+<pre><code class="language-python">filenames = [(str(x) + &quot;.xls&quot;) for x in range(2000, 2013)] + [(str(x) + &quot;.xlsx&quot;) for x in range(2013, 2019)]
+all_data = pd.concat([pd.read_excel(name, parse_dates=['Date']) for name in filenames], sort=False, ignore_index=True)
+</code></pre>
+
+<pre><code class="language-python"># Drop columns not in the latest year's dataframe
+
+df = all_data[years_data[-1].dtypes.index]
+</code></pre>
+
+<pre><code class="language-python"># Drop columns we're not interested in
+
+df = df.drop(['ATP', 'Location', 'Tournament', 'Series','Best of', 'Round', 'W1', 'L1', 'W2', 'L2', 'W3', 'L3', 'W4', 'L4', 'W5', 'L5', 'Wsets', 'Lsets', 'Comment'], axis=1)
+</code></pre>
+
+<pre><code class="language-python"># Add num played games for each player
+
+s = df[['Winner','Loser']].stack()
+matchcounts = s.groupby(s).cumcount().unstack().add_suffix('_matches')
+df = df.join(matchcounts)
+df.columns
+</code></pre>
+
+<pre><code>Index(['Date', 'Court', 'Surface', 'Winner', 'Loser', 'WRank', 'LRank', 'WPts',
+       'LPts', 'B365W', 'B365L', 'EXW', 'EXL', 'LBW', 'LBL', 'PSW', 'PSL',
+       'MaxW', 'MaxL', 'AvgW', 'AvgL', 'Winner_matches', 'Loser_matches'],
+      dtype='object')
+</code></pre>
+
+<pre><code class="language-python"># Find the max winner/loser odds out of the ones we have
+
+df['MaxLocalW'] = df[['PSW', 'B365W', 'EXW', 'LBW']].max(axis=1)
+df['MaxLocalL'] = df[['PSL', 'B365L', 'EXL', 'LBL']].max(axis=1)
+</code></pre>
+
+<pre><code class="language-python"># Populate ELO columns
+
+Player = namedtuple(&quot;Player&quot;, [&quot;rating&quot;, &quot;numMatches&quot;])
+
+def calcElo(winner, loser, k_params, r_params):
+    
+    evolved_k_params = [414, 6, 0.406072194388297]
+    fte_k_params = [250, 5, 0.4]
+    default_k_params =  evolved_k_params
+
+    evolved_r_params = [4, 684]
+    fte_r_params = [10, 400]
+    default_r_params =  evolved_r_params
+    
+    def fK(numMatches, params=default_k_params):
+        return params[0]/(numMatches+params[1])**params[2]
+    
+    def fR(rating, params=default_r_params):
+        return (float(params[0])**(rating/params[1]))
+
+    rW = fR(winner.rating, params=r_params)
+    rL = fR(loser.rating, params=r_params)
+    eW = rW/(rW+rL)
+    eL = rL/(rW+rL)
+    eloW = winner.rating + fK(winner.numMatches, params=k_params) * (1 - eW)
+    eloL = loser.rating + fK(loser.numMatches, params=k_params) * (0 - eL)
+    return (round(eloW), round(eloL))
+
+def populateELO(k_params=None, r_params=None):
+    elo = {}
+    winnerElos = []
+    loserElos = []
+    winnerElosPrevious = []
+    loserElosPrevious = []
+
+    for index, row in enumerate(df.itertuples(), 1):
+        winnerName = row.Winner
+        loserName = row.Loser
+        if not winnerName in elo:
+            elo[winnerName] = 1500
+        if not loserName in elo:
+            elo[loserName] = 1500
+
+        winner = Player(elo[winnerName], row.Winner_matches)
+        loser = Player(elo[loserName], row.Loser_matches)
+
+        c = calcElo(winner, loser, k_params, r_params)
+        
+        winnerElosPrevious.append(elo[winnerName])
+        loserElosPrevious.append(elo[loserName])
+        
+        elo[winnerName] = c[0]
+        elo[loserName] = c[1]
+
+        winnerElos.append(c[0])
+        loserElos.append(c[1])
+        
+    winnerSeries = pd.Series(winnerElos)
+    loserSeries = pd.Series(loserElos)
+
+    winnerSeriesPrev = pd.Series(winnerElosPrevious)
+    loserSeriesPrev = pd.Series(loserElosPrevious)
+
+    df['ELO_W_Exit'] = winnerSeries.values
+    df['ELO_L_Exit'] = loserSeries.values
+    df['ELO_W_Entry'] = winnerSeriesPrev.values
+    df['ELO_L_Entry'] = loserSeriesPrev.values
+    
+populateELO(default_k_params, default_r_params)
+</code></pre>
+
+<pre><code class="language-python">def getReturns(dataset, bookie, eloMinMatches=10, eloMinDiff=0):
+    bW = bookie + &quot;W&quot;
+    bL = bookie + &quot;L&quot;
+    subset = dataset.dropna(subset=[bW, bL])
+    subset = subset[pd.to_numeric(subset[bW], errors='coerce').notnull()]
+    subset = subset[pd.to_numeric(subset[bL], errors='coerce').notnull()]    
+    subset = subset.dropna(subset=[&quot;WRank&quot;, &quot;LRank&quot;, bW, bL, 'MaxLocalW', 'MaxLocalL', 'MaxW', 'MaxL', 'AvgW', 'AvgL'])
+    subset = subset[(subset['Winner_matches'] &gt; eloMinMatches) &amp; (subset['Loser_matches'] &gt; eloMinMatches)]
+    subset = subset[abs(subset.ELO_W_Entry - subset.ELO_L_Entry) &gt; eloMinDiff]
+        
+    elo_predicts_underdog_correctly_subset = subset[(subset[bW] &gt; subset[bL]) &amp; (subset.ELO_W_Entry &gt; subset.ELO_L_Entry)]
+    elo_predicts_underdog_incorrectly_subset = subset[(subset[bW] &lt; subset[bL]) &amp; (subset.ELO_W_Entry &lt; subset.ELO_L_Entry)]
+    elo_predicts_fav_correctly_subset = subset[(subset[bW] &lt; subset[bL]) &amp; (subset.ELO_W_Entry &gt; subset.ELO_L_Entry)]
+    elo_predicts_fav_incorrectly_subset = subset[(subset[bW] &gt; subset[bL]) &amp; (subset.ELO_W_Entry &lt; subset.ELO_L_Entry)]
+    
+    roi_smallest_odds = subset[bW][subset[bW] &lt; subset[bL]].sum() / len(subset)
+    roi_highest_odds = subset[bW][subset[bW] &gt; subset[bL]].sum() / len(subset)
+    roi_best_ranking = subset[bW][subset.WRank &lt; subset.LRank].sum() / len(subset)
+    roi_random = subset[bW].sample(int(len(subset)/2)).sum() / len(subset)
+    roi_elo = subset[bW][subset.ELO_W_Entry &gt; subset.ELO_L_Entry].sum() / len(subset)                                                                   
+    roi_elo_underdog = elo_predicts_underdog_correctly_subset[bW].sum() / (len(elo_predicts_underdog_correctly_subset) + len(elo_predicts_underdog_incorrectly_subset))
+    roi_elo_fav = elo_predicts_fav_correctly_subset[bW].sum() / (len(elo_predicts_fav_correctly_subset) + len(elo_predicts_fav_incorrectly_subset))                                                                  
+    
+    toROI = lambda x: (x -1) * 100    
+    return [
+        toROI(roi_smallest_odds),
+        toROI(roi_highest_odds),
+        toROI(roi_best_ranking), 
+        toROI(roi_random), 
+        toROI(roi_elo),
+        toROI(roi_elo_underdog),
+        toROI(roi_elo_fav)
+    ]
+
+results = pd.DataFrame()
+bookie_labels = ['Pinnacle', 'Bet365', 'Ladbrokes', 'Expekt', 'Oddsportal max odds', 'Max odds in this database']
+for i, bookie in enumerate(['PS', 'B365', 'LB', 'EX', 'Max', 'MaxLocal']):
+    all_values = getReturns(df, bookie, eloMinMatches=10, eloMinDiff=0)
+    results = results.append(pd.DataFrame([all_values], 
+                                          index=[bookie_labels[i]], 
+                                          columns=['Every favourite', 'Every underdog', 'Best ATP ranking', 'Random', 'Highest ELO', 'Underdogs with higher ELO', 'Favourites with higher ELO']))
+
+results.plot.bar(figsize=(15,10), width=0.8)
+plt.ylabel(&quot;Return on investment %&quot;)
+plt.legend(loc=4)
+plt.show()
+
+</code></pre>
+
+<p><img src="/images/output_7_0.png" alt="png" /></p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    
+    <img class="avatar" src="https://darkfunction.github.io/images/avatar.png">
+    <div>
+        <span class="dark">Sam Taylor</span>
+        <span>Edinburgh, UK</span>
+    </div>
+    
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fdarkfunction.github.io%2fposts%2felo-tennis%2f - Datascience%20exploration%202%3a%20ELO%20performance%20vs%20bet%20profitability%20in%20tennis "><span class="icon-twitter">  </span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect">  </span>
+</a>
+
+    </section>
+</footer>
+
+
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/posts/ticketsamaritan/">Ticket Samaritan<aside class="dates">Oct 13 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/wtaheightadv/">Datascience exploration: WTA Height Advantages<aside class="dates">Sep 11 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/cointweets/">Identifying cryptrocurrency spam/hype cycles on Twitter<aside class="dates">Sep 8 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/swiftbtc/">Playing with the Bitcoin protocol in Swift<aside class="dates">Apr 25 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/crossword/">French verbs crossword<aside class="dates">Mar 27 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/line-art/">Line art<aside class="dates">Jul 12 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/ant-foraging-simulator/">Ant foraging simulator<aside class="dates">Jul 1 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/verbedujour/">Verbe Du Jour online!<aside class="dates">Jan 13 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/casinofairnesstesting/">Casino fairness testing<aside class="dates">Dec 13 2014</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/codalorelease/">Codalo released! <aside class="dates">Nov 14 2014</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    
+    <a class="symbol" href="https://www.github.com/darkFunction">
+        circlegithub
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/darkfunction/">
+        circlelinkedin
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/darkFunction">
+        circletwitterbird
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Sam Taylor
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://darkfunction.github.io/js/main.js"></script>
+<script src="https://darkfunction.github.io/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

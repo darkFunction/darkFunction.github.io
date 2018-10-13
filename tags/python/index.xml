@@ -6,10 +6,19 @@
     <description>Recent content in Python on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 11 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darkfunction.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Datascience exploration 2: ELO performance vs bet profitability in tennis</title>
+      <link>https://darkfunction.github.io/posts/elo-tennis/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkfunction.github.io/posts/elo-tennis/</guid>
+      <description>I wrote a function to genetically evolve the parameters to an ELO algorithm (code not included here) and compared the performance of these parameters across bookmakers when using the ELO prediction to place hypothetical bets. Interestingly there is a tiny advantage if you can secure the absolute best odds. The underdogs with higher ELO looks too good to be true and that&amp;rsquo;s because the number of available bets where an underdog has a higher ELO is very small.</description>
+    </item>
     
     <item>
       <title>Datascience exploration: WTA Height Advantages</title>
