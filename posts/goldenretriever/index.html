@@ -7,7 +7,7 @@
 <meta name="author" content="Sam Taylor">
 <meta name="description" content="Learning and personal development blog">
 <meta name="generator" content="Hugo 0.38.2" />
-<title>Bitforce Jalapeno &#43; Raspberry Pi &#43; cgminer &middot; Sam Taylor</title>
+<title>Enum-based endpoint declarations &middot; Sam Taylor</title>
 <link rel="shortcut icon" href="https://darkfunction.github.io/images/favicon.ico">
 <link rel="stylesheet" href="https://darkfunction.github.io/css/style.css">
 <link rel="stylesheet" href="https://darkfunction.github.io/css/highlight.css">
@@ -21,20 +21,17 @@
 <link href="https://darkfunction.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Sam Taylor" />
 
 
-<meta property="og:title" content="Bitforce Jalapeno &#43; Raspberry Pi &#43; cgminer" />
-<meta property="og:description" content="My BFL Jalapeno finally arrived. It&rsquo;s a cute little box but the fan is really whirring away, so I ordered a replacement. It&rsquo;s sitting in the living room plugged into a Pi which is also acting as a backup file server. I&rsquo;m monitoring cgminer on this box through my VPS which has a tmux screen pane devoted to it, so that I can keep an eye on it without having to login all the time." />
+<meta property="og:title" content="Enum-based endpoint declarations" />
+<meta property="og:description" content="Published a miniature library for super-easy interfacing with your backend from a Swift client application. I had the idea of expressing all my backend endpoints in a single enum, and it grew from there. I&rsquo;m using it in a project at the moment and have been really happy with it.
+(https://github.com/darkFunction/GoldenRetriever)[https://github.com/darkFunction/GoldenRetriever]" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://darkfunction.github.io/posts/jalapeno/" />
+<meta property="og:url" content="https://darkfunction.github.io/posts/goldenretriever/" />
 
 
 
-<meta property="article:published_time" content="2013-07-25T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2018-12-19T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2013-07-25T00:00:00&#43;00:00"/>
-
-
-
-
+<meta property="article:modified_time" content="2018-12-19T00:00:00&#43;00:00"/>
 
 
 
@@ -44,21 +41,27 @@
 
 
 
-<meta itemprop="name" content="Bitforce Jalapeno &#43; Raspberry Pi &#43; cgminer">
-<meta itemprop="description" content="My BFL Jalapeno finally arrived. It&rsquo;s a cute little box but the fan is really whirring away, so I ordered a replacement. It&rsquo;s sitting in the living room plugged into a Pi which is also acting as a backup file server. I&rsquo;m monitoring cgminer on this box through my VPS which has a tmux screen pane devoted to it, so that I can keep an eye on it without having to login all the time.">
-
-
-<meta itemprop="datePublished" content="2013-07-25T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2013-07-25T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="86">
 
 
 
-<meta itemprop="keywords" content="crypto,bitcoin," />
+
+<meta itemprop="name" content="Enum-based endpoint declarations">
+<meta itemprop="description" content="Published a miniature library for super-easy interfacing with your backend from a Swift client application. I had the idea of expressing all my backend endpoints in a single enum, and it grew from there. I&rsquo;m using it in a project at the moment and have been really happy with it.
+(https://github.com/darkFunction/GoldenRetriever)[https://github.com/darkFunction/GoldenRetriever]">
+
+
+<meta itemprop="datePublished" content="2018-12-19T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-12-19T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="51">
+
+
+
+<meta itemprop="keywords" content="swift," />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Bitforce Jalapeno &#43; Raspberry Pi &#43; cgminer"/>
-<meta name="twitter:description" content="My BFL Jalapeno finally arrived. It&rsquo;s a cute little box but the fan is really whirring away, so I ordered a replacement. It&rsquo;s sitting in the living room plugged into a Pi which is also acting as a backup file server. I&rsquo;m monitoring cgminer on this box through my VPS which has a tmux screen pane devoted to it, so that I can keep an eye on it without having to login all the time."/>
+<meta name="twitter:title" content="Enum-based endpoint declarations"/>
+<meta name="twitter:description" content="Published a miniature library for super-easy interfacing with your backend from a Swift client application. I had the idea of expressing all my backend endpoints in a single enum, and it grew from there. I&rsquo;m using it in a project at the moment and have been really happy with it.
+(https://github.com/darkFunction/GoldenRetriever)[https://github.com/darkFunction/GoldenRetriever]"/>
 <meta name="twitter:site" content="@https://www.twitter.com/darkFunction"/>
 
 
@@ -83,28 +86,24 @@
         
 <article class="post">
     <header>
-        <h1>Bitforce Jalapeno &#43; Raspberry Pi &#43; cgminer</h1>
+        <h1>Enum-based endpoint declarations</h1>
         <h2 class="subtitle"></h2>
         <h2 class="headline">
-        July 25, 2013
+        December 19, 2018
         <br>
         
         
             
-                <a href="https://darkfunction.github.io/tags/crypto">crypto</a>
-            
-                <a href="https://darkfunction.github.io/tags/bitcoin">bitcoin</a>
+                <a href="https://darkfunction.github.io/tags/swift">swift</a>
             
         
         
         </h2>
     </header>
     <section id="post-body">
-        <p>My BFL Jalapeno finally arrived.  It&rsquo;s a cute little box but the fan is really whirring away, so I ordered <a href="http://www.amazon.co.uk/gp/product/B009LELXQG/ref=oh_details_o00_s00_i00?ie=UTF8&amp;psc=1">a replacement</a>.  It&rsquo;s sitting in the living room plugged into a Pi which is also acting as a backup file server.  I&rsquo;m monitoring cgminer on this box through my VPS which has a tmux screen pane devoted to it, so that I can keep an eye on it without having to login all the time.  It&rsquo;s steady around 42°C and 5.3Gh/s.</p>
+        <p>Published a miniature library for super-easy interfacing with your backend from a Swift client application.  I had the idea of expressing all my backend endpoints in a single enum, and it grew from there. I&rsquo;m using it in a project at the moment and have been really happy with it.</p>
 
-<p><img src="/images/cgminer.png" alt="cgminer screenshot" /></p>
-
-<p><a href="http://stinkydigit.darkfunction.com/miner.php">Web monitor for this miner</a></p>
+<p>(<a href="https://github.com/darkFunction/GoldenRetriever)[https://github.com/darkFunction/GoldenRetriever">https://github.com/darkFunction/GoldenRetriever)[https://github.com/darkFunction/GoldenRetriever</a>]</p>
 
     </section>
 </article>
@@ -118,7 +117,7 @@
     </div>
     
     <section id="sharing">
-        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fdarkfunction.github.io%2fposts%2fjalapeno%2f - Bitforce%20Jalapeno%20%2b%20Raspberry%20Pi%20%2b%20cgminer "><span class="icon-twitter">  </span></a>
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fdarkfunction.github.io%2fposts%2fgoldenretriever%2f - Enum-based%20endpoint%20declarations "><span class="icon-twitter">  </span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -138,10 +137,6 @@
 
     
     
-    
-        <li>
-            <a href="/posts/goldenretriever/">Enum-based endpoint declarations<aside class="dates">Dec 19 2018</aside></a>
-        </li>
     
         <li>
             <a href="/posts/ticketsamaritan/">Ticket Samaritan<aside class="dates">Oct 13 2018</aside></a>
@@ -177,6 +172,10 @@
     
         <li>
             <a href="/posts/verbedujour/">Verbe Du Jour online!<aside class="dates">Jan 13 2015</aside></a>
+        </li>
+    
+        <li>
+            <a href="/posts/casinofairnesstesting/">Casino fairness testing<aside class="dates">Dec 13 2014</aside></a>
         </li>
     
 </ul>

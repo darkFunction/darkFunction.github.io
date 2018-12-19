@@ -6,10 +6,20 @@
     <description>Recent content in Swift on Sam Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://darkfunction.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Enum-based endpoint declarations</title>
+      <link>https://darkfunction.github.io/posts/goldenretriever/</link>
+      <pubDate>Wed, 19 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkfunction.github.io/posts/goldenretriever/</guid>
+      <description>Published a miniature library for super-easy interfacing with your backend from a Swift client application. I had the idea of expressing all my backend endpoints in a single enum, and it grew from there. I&amp;rsquo;m using it in a project at the moment and have been really happy with it.
+(https://github.com/darkFunction/GoldenRetriever)[https://github.com/darkFunction/GoldenRetriever]</description>
+    </item>
     
     <item>
       <title>Ticket Samaritan</title>
