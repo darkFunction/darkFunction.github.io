@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Side Project on Sam Taylor</title>
+    <link>https://darkfunction.github.io/tags/side-project/</link>
+    <description>Recent content in Side Project on Sam Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 26 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://darkfunction.github.io/tags/side-project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ThreadPaint.art launched</title>
+      <link>https://darkfunction.github.io/posts/threadpaint/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://darkfunction.github.io/posts/threadpaint/</guid>
+      <description>Launched a site called threadpaint.art that lets you generate instructions for neat artworks made from a continuous line of thread.
+I tried to build a stepper motor attachment to make building these pieces really easy, and it kinda worked except the wooden chassis was too flexible and caused too much wobble! (See video) Originally I wanted to have a robot arm do it, but nothing has the precision until you start getting into expensive, industrial-level tools.</description>
+    </item>
+    
+  </channel>
+</rss>
